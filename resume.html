@@ -1,0 +1,123 @@
+<style>
+/**************************
+*     Generic styles:     *
+***************************/
+
+/* For customizing the dimension, orientation, and margins of printed pages: */
+@page {
+  size: A4 portrait;
+  page-orientation: upright;
+  margin: 0;
+}
+
+:root {
+  --header-bg: #d9d9d9;
+  --sidebar-bg: black;
+  /* --sidebar-bg: #323232; */
+  --main-bg: white;
+  /* --main-bg: #ebebeb; */
+
+  --sidebar-pos-top: 2rem;
+  --sidebar-pos-left: 1rem;
+  --sidebar-width: 30vw;
+}
+
+html, body {
+  /* A4 paper size: */
+  /* width: 210mm;
+  height: 297mm; */
+  min-height: 100vh;
+  max-width: 100%;
+  /* This also prevents scrolling on tablets, which be a problem for wide content in portrait mode: */
+  /* overflow-x: hidden; */
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content auto;
+}
+
+/**************************
+*     Sidebar styles:     *
+***************************/
+aside {
+  position: absolute;
+  top: var(--sidebar-pos-top);
+  left: var(--sidebar-pos-left);
+  width: var(--sidebar-width);
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  color: var(--main-bg);
+}
+
+aside > h2 {
+  background-color: var(--header-bg);
+  color: var(--sidebar-bg);
+}
+
+/**************************
+*     Header styles:      *
+***************************/
+header {
+  background-color: var(--header-bg);
+}
+
+header > div {
+  margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+  padding-left: 5rem;
+  padding-right: 1rem;
+}
+
+/**************************
+*       Main styles:      *
+***************************/
+main {
+  background-color: var(--main-bg);
+}
+
+main > div {
+  margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+}
+
+main > div > h2 {
+  background-color: var(--sidebar-bg);
+  color: var(--main-bg);
+}
+
+/* * { outline: 1px solid red; } */
+</style>
+
+
+<aside>
+
+  ![pic]()
+  
+  <h2>CONTACT</h2>
+  &nbsp;
+  <h2>ABOUT ME</h2>
+  &nbsp;
+  <h2>SOFT SKILLS</h2>
+  &nbsp;
+  <h2>TECH SKILLS</h2>
+  
+  
+  </aside>
+
+
+<header>
+  <div>
+    <h1>David Deprost</h1>
+    <h2>.NET DEVELOPER</h2>
+    <hr>
+    <p>
+      I am a creative developer with a passion for design. I love putting efficient code behind an intuitive user interface. I always strive for the optimal solution in function of maintainability vs performance. I have a very broad interest in technology, science and society, and I'm always looking to learn more. I very much enjoy being part of a team.
+    </p>
+  </div>
+</header>
+
+
+<main>
+  <div>
+    <h2>EDUCATION</h2>
+
+    <h2>EXPERIENCE</h2>
+  </div>
+</main>
