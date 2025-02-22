@@ -44,13 +44,42 @@ aside {
   left: var(--sidebar-pos-left);
   width: var(--sidebar-width);
   height: 100%;
-  background-color: var(--sidebar-bg);
   color: var(--main-bg);
-}
 
-aside > h2 {
-  background-color: var(--header-bg);
-  color: var(--sidebar-bg);
+  h2 {
+    background-color: var(--main-bg);
+    color: var(--sidebar-bg);
+
+    &:first-of-type {
+      background-color: var(--header-bg);
+      margin-top: 0;
+    }
+  }
+  #sidebar-top {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: var(--sidebar-width);
+    width: var(--sidebar-width);
+    border-radius: 50%;
+    background-color: var(--sidebar-bg);
+
+    #avatar {
+      content: url(assets/images/avatar-david.png);
+      width: calc(0.75 * var(--sidebar-width));
+      clip-path: circle(45% at 52% 50%);
+      display: block;
+      margin: 1rem auto;
+    }
+  }
+  #sidebar-content {
+    position: absolute;
+    top: calc(var(--sidebar-width)/2);
+    width: var(--sidebar-width);
+    padding-top: calc(var(--sidebar-width)/2);
+    height: 100%;
+    background-color: var(--sidebar-bg);
+  }
 }
 
 /**************************
@@ -58,12 +87,11 @@ aside > h2 {
 ***************************/
 header {
   background-color: var(--header-bg);
-}
 
-header > div {
-  margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
-  padding-left: 5rem;
-  padding-right: 1rem;
+  > div {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+    padding: var(--sidebar-pos-top) 1rem 1rem 5rem;
+  }
 }
 
 /**************************
@@ -71,15 +99,15 @@ header > div {
 ***************************/
 main {
   background-color: var(--main-bg);
-}
 
-main > div {
-  margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
-}
+  > div {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
 
-main > div > h2 {
-  background-color: var(--sidebar-bg);
-  color: var(--main-bg);
+    > h2 {
+      background-color: var(--sidebar-bg);
+      color: var(--main-bg);
+    }
+  }
 }
 
 /* * { outline: 1px solid red; } */
@@ -87,19 +115,20 @@ main > div > h2 {
 
 
 <aside>
+  <div id="sidebar-top">
+    <image id="avatar">
+  </div>
 
-  ![pic]()
-  
-  <h2>CONTACT</h2>
-  &nbsp;
-  <h2>ABOUT ME</h2>
-  &nbsp;
-  <h2>SOFT SKILLS</h2>
-  &nbsp;
-  <h2>TECH SKILLS</h2>
-  
-  
-  </aside>
+  <div id="sidebar-content">
+    <h2>CONTACT</h2>
+    &nbsp;
+    <h2>ABOUT ME</h2>
+    &nbsp;
+    <h2>SOFT SKILLS</h2>
+    &nbsp;
+    <h2>TECH SKILLS</h2>
+  </div>
+</aside>
 
 
 <header>
