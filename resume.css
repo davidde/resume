@@ -1,0 +1,277 @@
+/**************************
+*     Generic styles:     *
+***************************/
+
+/* For customizing the dimension, orientation, and margins of printed pages: */
+@page {
+  size: A4 portrait;
+  page-orientation: upright;
+  margin: 0;
+}
+
+/* Poppins Font: */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: url(assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url(assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 500;
+  src: url(assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 600;
+  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url(assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  src: url(assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 800;
+  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url(assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  src: url(assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
+}
+
+/* Work Sans Font: */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  src: url(assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  src: url(assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
+}
+
+/* Inter Font: */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: url(assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  src: url(assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+}
+
+:root {
+  --header-bg: #d9d9d9;
+  --sidebar-bg: black;
+  /* --sidebar-bg: #323232; */
+  --main-bg: white;
+  /* --main-bg: #ebebeb; */
+
+  --sidebar-pos-top: 2rem;
+  --sidebar-pos-left: 1rem;
+  --sidebar-width: 30vw;
+}
+
+html, body {
+  /* A4 paper size for printing: */
+  /* width: 210mm;
+  height: 297mm; */
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content auto;
+  font-family: 'Poppins';
+}
+
+/**************************
+*     Sidebar styles:     *
+***************************/
+aside {
+  position: absolute;
+  top: var(--sidebar-pos-top);
+  left: var(--sidebar-pos-left);
+  width: var(--sidebar-width);
+  height: 100%;
+  color: var(--main-bg);
+
+  h2 {
+    background-color: var(--main-bg);
+    color: var(--sidebar-bg);
+    font-weight: 800;
+
+    &:first-of-type {
+      background-color: var(--header-bg);
+      margin-top: 0;
+    }
+  }
+  #sidebar-top {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: var(--sidebar-width);
+    width: var(--sidebar-width);
+    border-radius: 50%;
+    background-color: var(--sidebar-bg);
+
+    #avatar {
+      content: url(assets/images/avatar-david.png);
+      width: calc(0.75 * var(--sidebar-width));
+      clip-path: circle(45% at 52% 50%);
+      display: block;
+      margin: 1rem auto;
+    }
+  }
+  #sidebar-content {
+    position: absolute;
+    top: calc(var(--sidebar-width)/2);
+    width: var(--sidebar-width);
+    padding-top: calc(var(--sidebar-width)/2);
+    height: 100%;
+    background-color: var(--sidebar-bg);
+  }
+}
+
+/* * { outline: 1px solid red; } */
+
+/**************************
+*     Header styles:      *
+***************************/
+header {
+  background-color: var(--header-bg);
+
+  > div {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+    padding: var(--sidebar-pos-top) 2rem 1rem calc(var(--sidebar-width)/4);
+
+    /* h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0rem;
+    } */
+    h1 {
+      font-family: 'Inter';
+      font-weight: 900;
+      font-size: 3.5rem;
+      letter-spacing: 0.05rem;
+      word-spacing: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0 0 1rem 0;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+/**************************
+*       Main styles:      *
+***************************/
+main {
+  background-color: var(--main-bg);
+
+  > div {
+    margin: 0 0.5rem 0 calc(var(--sidebar-width) + var(--sidebar-pos-left) - 1px);
+
+    > h2 {
+      background-color: var(--sidebar-bg);
+      color: var(--main-bg);
+      font-weight: 800;
+    }
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      margin-top: 0.75rem;
+
+      p {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+
+        span {
+          &:nth-of-type(1) {
+            font-family: 'Work Sans';
+            font-style: italic;
+            width: 8rem;
+          }
+          &:nth-of-type(2) {
+            font-weight: 600;
+          }
+        }
+
+        &:nth-of-type(2) {
+          font-family: 'Inter';
+          font-style: italic;
+          margin-left: 8rem;
+        }
+      }
+      span {
+        ul {
+          margin-top: 0.5rem;
+
+          li {
+            font-size: 0.75rem;
+            margin-left: 6.6rem;
+            margin-top: 0;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* * { outline: 1px solid red; } */
