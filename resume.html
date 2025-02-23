@@ -10,6 +10,104 @@
   margin: 0;
 }
 
+/* Poppins Font: */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: url(assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url(assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 500;
+  src: url(assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 600;
+  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url(assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  src: url(assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 800;
+  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url(assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  src: url(assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
+}
+
+/* Work Sans Font: */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  src: url(assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  src: url(assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
+}
+
+/* Inter Font: */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: url(assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  src: url(assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+}
+
 :root {
   --header-bg: #d9d9d9;
   --sidebar-bg: black;
@@ -23,16 +121,15 @@
 }
 
 html, body {
-  /* A4 paper size: */
+  /* A4 paper size for printing: */
   /* width: 210mm;
   height: 297mm; */
   min-height: 100vh;
   max-width: 100%;
-  /* This also prevents scrolling on tablets, which be a problem for wide content in portrait mode: */
-  /* overflow-x: hidden; */
   margin: 0;
   display: grid;
   grid-template-rows: min-content auto;
+  font-family: 'Poppins';
 }
 
 /**************************
@@ -49,6 +146,7 @@ aside {
   h2 {
     background-color: var(--main-bg);
     color: var(--sidebar-bg);
+    font-weight: 800;
 
     &:first-of-type {
       background-color: var(--header-bg);
@@ -82,6 +180,8 @@ aside {
   }
 }
 
+/* * { outline: 1px solid red; } */
+
 /**************************
 *     Header styles:      *
 ***************************/
@@ -90,7 +190,30 @@ header {
 
   > div {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
-    padding: var(--sidebar-pos-top) 1rem 1rem 5rem;
+    padding: var(--sidebar-pos-top) 1rem 1rem calc(var(--sidebar-width)/3);
+
+    /* h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0rem;
+    } */
+    h1 {
+      font-family: 'Inter';
+      font-weight: 900;
+      font-size: 2.8rem;
+      letter-spacing: 0.05rem;
+      word-spacing: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0 0 1rem 0;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+    }
   }
 }
 
@@ -101,11 +224,53 @@ main {
   background-color: var(--main-bg);
 
   > div {
-    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+    margin: 0 0.5rem 0 calc(var(--sidebar-width) + var(--sidebar-pos-left) - 1px);
 
     > h2 {
       background-color: var(--sidebar-bg);
       color: var(--main-bg);
+      font-weight: 800;
+    }
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      margin-top: 0.75rem;
+
+      p {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+
+        span {
+          &:nth-of-type(1) {
+            font-family: 'Work Sans';
+            font-style: italic;
+            width: 8rem;
+          }
+          &:nth-of-type(2) {
+            font-weight: 600;
+          }
+        }
+
+        &:nth-of-type(2) {
+          font-family: 'Inter';
+          font-style: italic;
+          margin-left: 8rem;
+        }
+      }
+      span {
+        ul {
+          margin-top: 0.5rem;
+
+          li {
+            font-size: 0.75rem;
+            margin-left: 6.6rem;
+            margin-top: 0;
+            line-height: 1.4;
+          }
+        }
+      }
     }
   }
 }
@@ -146,7 +311,144 @@ main {
 <main>
   <div>
     <h2>EDUCATION</h2>
+    <ul>
+      <li>
+        <p>
+          <span>
+            2024 - heden
+          </span>
+          <span>
+            Gegradueerde Elektromechanische systemen
+          </span>
+        </p>
+        <p>
+          Odisee Gent, in opleiding eerste fase
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            2022 - 2023
+          </span>
+          <span>
+            Opleiding .NET developer met C#
+          </span>
+        </p>
+        <p>
+          VDAB, certificaat behaald
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            2011 - 2013
+          </span>
+          <span>
+            Biologie
+          </span>
+        </p>
+        <p>
+          VUB, vakken gevolgd
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            2004 - 2005
+          </span>
+          <span>
+            Bio-ingenieur
+          </span>
+        </p>
+        <p>
+          Ugent, vakken gevolgd
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            1998 - 2004
+          </span>
+          <span>
+            ASO Wetenschappen - Wiskunde
+          </span>
+        </p>
+        <p>
+          Sint-Barbaracollege, diploma behaald
+        </p>
+      </li>
+    </ul>
 
     <h2>EXPERIENCE</h2>
+    <ul>
+      <li>
+        <p>
+          <span>
+            2020 - 2021
+          </span>
+          <span>
+            Vrijwilligerswerk Tanzania
+          </span>
+        </p>
+        <p>
+          Golden Dream Safaris
+        </p>
+        <span>
+          <ul>
+            <li>
+              Ontwikkelen van website
+            </li>
+            <li>
+              Ontwikkelen van quotation tool
+            </li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            2018 - 2019
+          </span>
+          <span>
+            Open-source development
+          </span>
+        </p>
+        <p>
+          Github, verschillende React.js-projecten
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <span>
+            2016 - 2017
+          </span>
+          <span>
+            Python developer
+          </span>
+        </p>
+        <p>
+          TLCC
+        </p>
+        <span>
+          <ul>
+            <li>
+              Development en maintenance van Ediflex, een ETL platform voor de transport- en logistiek sector
+            </li>
+            <li>
+              Troubleshooting van runtime errors in Ediflex
+            </li>
+            <li>
+              Opvolging en support voor klanten
+            </li>
+          </ul>
+        </span>
+      </li>
+    </ul>
   </div>
 </main>
