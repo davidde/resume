@@ -8,6 +8,7 @@
     monospace;
     --spacing: 0.25rem;
     --font-weight-normal: 400;
+    --font-weight-semibold: 600;
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --default-font-family: var(--font-sans);
@@ -172,14 +173,14 @@
   .top-\[calc\(var\(--sidebar-width\)\/2\)\] {
     top: calc(var(--sidebar-width) / 2);
   }
-  .top-\[var\(--sidebar-pos-top\)\] {
-    top: var(--sidebar-pos-top);
-  }
   .left-\[var\(--sidebar-pos-left\)\] {
     left: var(--sidebar-pos-left);
   }
   .z-10 {
     z-index: 10;
+  }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
   }
   .mx-\[auto\] {
     margin-inline: auto;
@@ -190,11 +191,29 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
+  .mt-\[0\.5rem\] {
+    margin-top: 0.5rem;
+  }
+  .mt-\[0\.75rem\] {
+    margin-top: 0.75rem;
+  }
   .mt-\[1\.5rem\] {
     margin-top: 1.5rem;
   }
+  .mt-\[2rem\] {
+    margin-top: 2rem;
+  }
+  .mt-\[var\(--sidebar-pos-top\)\] {
+    margin-top: var(--sidebar-pos-top);
+  }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0);
+  }
+  .mr-\[0\.5rem\] {
+    margin-right: 0.5rem;
+  }
+  .mb-0 {
+    margin-bottom: calc(var(--spacing) * 0);
   }
   .mb-\[1rem\] {
     margin-bottom: 1rem;
@@ -202,8 +221,23 @@
   .ml-0 {
     margin-left: calc(var(--spacing) * 0);
   }
+  .ml-\[2rem\] {
+    margin-left: 2rem;
+  }
+  .ml-\[8rem\] {
+    margin-left: 8rem;
+  }
+  .ml-\[9rem\] {
+    margin-left: 9rem;
+  }
   .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-pos-left\)\)\] {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+  }
+  .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-pos-left\)-1px\)\] {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left) - 1px);
+  }
+  .flex {
+    display: flex;
   }
   .h-\[var\(--sidebar-width\)\] {
     height: var(--sidebar-width);
@@ -211,11 +245,23 @@
   .h-full {
     height: 100%;
   }
+  .w-\[8rem\] {
+    width: 8rem;
+  }
   .w-\[calc\(0\.75\*var\(--sidebar-width\)\)\] {
     width: calc(0.75 * var(--sidebar-width));
   }
   .w-\[var\(--sidebar-width\)\] {
     width: var(--sidebar-width);
+  }
+  .list-outside {
+    list-style-position: outside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
@@ -229,6 +275,9 @@
   .bg-\[var\(--sidebar-bg\)\] {
     background-color: var(--sidebar-bg);
   }
+  .pt-\[\.4rem\] {
+    padding-top: .4rem;
+  }
   .pt-\[calc\(var\(--sidebar-width\)\/2\)\] {
     padding-top: calc(var(--sidebar-width) / 2);
   }
@@ -238,8 +287,14 @@
   .pr-\[2rem\] {
     padding-right: 2rem;
   }
+  .pb-\[\.3rem\] {
+    padding-bottom: .3rem;
+  }
   .pb-\[1rem\] {
     padding-bottom: 1rem;
+  }
+  .pl-\[2\.5rem\] {
+    padding-left: 2.5rem;
   }
   .pl-\[calc\(var\(--sidebar-width\)\/4\)\] {
     padding-left: calc(var(--sidebar-width) / 4);
@@ -247,14 +302,32 @@
   .font-\[Inter\] {
     font-family: Inter;
   }
+  .font-\[Work-Sans\] {
+    font-family: Work-Sans;
+  }
   .text-\[0\.9rem\] {
     font-size: 0.9rem;
+  }
+  .text-\[0\.75rem\] {
+    font-size: 0.75rem;
   }
   .text-\[1\.3rem\] {
     font-size: 1.3rem;
   }
   .text-\[3\.5rem\] {
     font-size: 3.5rem;
+  }
+  .leading-\[1\.3rem\] {
+    --tw-leading: 1.3rem;
+    line-height: 1.3rem;
+  }
+  .leading-\[1\.4\] {
+    --tw-leading: 1.4;
+    line-height: 1.4;
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
   }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
@@ -267,6 +340,14 @@
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[0\.1rem\] {
+    --tw-tracking: 0.1rem;
+    letter-spacing: 0.1rem;
   }
   .tracking-\[0\.05rem\] {
     --tw-tracking: 0.05rem;
@@ -373,7 +454,7 @@
   src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
-  font-family: 'Work Sans';
+  font-family: 'Work-Sans';
   font-style: italic;
   src: url(../fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
 }
@@ -402,60 +483,10 @@ html, body {
   display: grid;
   grid-template-rows: min-content auto;
   font-family: 'Poppins';
-  ul {
-    list-style: disc outside;
-  }
 }
-* {
-  outline: 1px solid red;
-}
-main {
-  background-color: var(--main-bg);
-  > div {
-    margin: 0 0.5rem 0 calc(var(--sidebar-width) + var(--sidebar-pos-left) - 1px);
-    > h2 {
-      background-color: var(--sidebar-bg);
-      color: var(--main-bg);
-      font-weight: 800;
-    }
-    li {
-      font-size: 0.9rem;
-      line-height: 1.3rem;
-      margin-left: 2rem;
-      margin-top: 0.75rem;
-      p {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        span {
-          &:nth-of-type(1) {
-            font-family: 'Work Sans';
-            font-style: italic;
-            width: 8rem;
-          }
-          &:nth-of-type(2) {
-            font-weight: 600;
-          }
-        }
-        &:nth-of-type(2) {
-          font-family: 'Inter';
-          font-style: italic;
-          margin-left: 8rem;
-        }
-      }
-      span {
-        ul {
-          margin-top: 0.5rem;
-          li {
-            font-size: 0.75rem;
-            margin-left: 6.6rem;
-            margin-top: 0;
-            line-height: 1.4;
-          }
-        }
-      }
-    }
-  }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";

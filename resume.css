@@ -100,7 +100,7 @@
   src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
-  font-family: 'Work Sans';
+  font-family: 'Work-Sans';
   font-style: italic;
   src: url(../fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
 }
@@ -139,71 +139,6 @@ html, body {
   display: grid;
   grid-template-rows: min-content auto;
   font-family: 'Poppins';
-
-  ul {
-    list-style: disc outside;
-  }
-}
-
-* { outline: 1px solid red; }
-
-/**************************
-*       Main styles:      *
-***************************/
-main {
-  background-color: var(--main-bg);
-
-  > div {
-    margin: 0 0.5rem 0 calc(var(--sidebar-width) + var(--sidebar-pos-left) - 1px);
-
-    > h2 {
-      background-color: var(--sidebar-bg);
-      color: var(--main-bg);
-      font-weight: 800;
-    }
-
-    li {
-      font-size: 0.9rem;
-      line-height: 1.3rem;
-      margin-left: 2rem;
-      margin-top: 0.75rem;
-
-      p {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-
-        span {
-          &:nth-of-type(1) {
-            font-family: 'Work Sans';
-            font-style: italic;
-            width: 8rem;
-          }
-          &:nth-of-type(2) {
-            font-weight: 600;
-          }
-        }
-
-        &:nth-of-type(2) {
-          font-family: 'Inter';
-          font-style: italic;
-          margin-left: 8rem;
-        }
-      }
-      span {
-        ul {
-          margin-top: 0.5rem;
-
-          li {
-            font-size: 0.75rem;
-            margin-left: 6.6rem;
-            margin-top: 0;
-            line-height: 1.4;
-          }
-        }
-      }
-    }
-  }
 }
 
 /* * { outline: 1px solid red; } */
