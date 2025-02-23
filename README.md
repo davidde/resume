@@ -1,11 +1,18 @@
-# resumd
+# Resume
 ## Project Goal
-**Creating a pdf resume from markdown.**
+* Recreate my fancy [Canva](https://www.canva.com) resume in pure HTML + CSS.
+* Test PDF export.
+* Ultimately, creating a vscode extension for **markdown resume to pdf conversion** with a live preview (similar to `Markdown PDF` + `Markdown Preview Github Styling`).  
+  This will likely involve digging into existing markdown to HTML parsers and try to nudge them in the right direction for a better html resume layout. Look into [PANDOC](https://pandoc.org/MANUAL.html) first, as well as [Markdown PDF](https://github.com/yzane/vscode-markdown-pdf) and [Markdown Preview Github Styling](https://github.com/mjbvz/vscode-github-markdown-preview-style).
+
+&nbsp;
+> [!IMPORTANT]
+> Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meanig no javascript or node.js is involved.  
+> We're currently working on **Windows 11**.
+> 
+&nbsp;
 
 ## Installing TailwindCSS
-> [!NOTE]
-> We will install **TailwindCSS v4** using the **standalone CLI** (without node.js) on **Windows**.
-
 * Download the latest release from https://github.com/tailwindlabs/tailwindcss/releases, and rename it to simply `tailwindcss.exe`.
 * Move this executable to somewhere in your path, e.g. `C:\Windows\System32\WindowsPowerShell\v1.0`.
 * Verify if it runs from anywhere:
@@ -23,7 +30,7 @@
   # To compile and minify the CSS for production:
   # tailwindcss -i resume.css -o assets/css/tailwind-output.css --minify
   ```
-* Then update the linked stylesheet in the html:
+* Update the linked stylesheet in the html:
   ```html
   <!-- Replace the input stylesheet: -->
   <!-- <link rel='stylesheet' href='resume.css'> -->

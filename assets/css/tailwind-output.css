@@ -7,7 +7,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --spacing: 0.25rem;
+    --font-weight-normal: 400;
     --font-weight-extrabold: 800;
+    --font-weight-black: 900;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(--font-sans--font-variation-settings);
@@ -188,6 +190,21 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
+  .mt-\[1\.5rem\] {
+    margin-top: 1.5rem;
+  }
+  .mr-0 {
+    margin-right: calc(var(--spacing) * 0);
+  }
+  .mb-\[1rem\] {
+    margin-bottom: 1rem;
+  }
+  .ml-0 {
+    margin-left: calc(var(--spacing) * 0);
+  }
+  .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-pos-left\)\)\] {
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
+  }
   .h-\[var\(--sidebar-width\)\] {
     height: var(--sidebar-width);
   }
@@ -215,9 +232,45 @@
   .pt-\[calc\(var\(--sidebar-width\)\/2\)\] {
     padding-top: calc(var(--sidebar-width) / 2);
   }
+  .pt-\[var\(--sidebar-pos-top\)\] {
+    padding-top: var(--sidebar-pos-top);
+  }
+  .pr-\[2rem\] {
+    padding-right: 2rem;
+  }
+  .pb-\[1rem\] {
+    padding-bottom: 1rem;
+  }
+  .pl-\[calc\(var\(--sidebar-width\)\/4\)\] {
+    padding-left: calc(var(--sidebar-width) / 4);
+  }
+  .font-\[Inter\] {
+    font-family: Inter;
+  }
+  .text-\[0\.9rem\] {
+    font-size: 0.9rem;
+  }
+  .text-\[1\.3rem\] {
+    font-size: 1.3rem;
+  }
+  .text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .tracking-\[0\.05rem\] {
+    --tw-tracking: 0.05rem;
+    letter-spacing: 0.05rem;
   }
   .text-\[var\(--main-bg\)\] {
     color: var(--main-bg);
@@ -225,10 +278,16 @@
   .text-\[var\(--sidebar-bg\)\] {
     color: var(--sidebar-bg);
   }
+  .italic {
+    font-style: italic;
+  }
 }
 @layer utilities {
   .clip-circle-45 {
     clip-path: circle(45% at 52% 50%);
+  }
+  .word-spacing-5 {
+    word-spacing: 0.5rem;
   }
 }
 @page {
@@ -240,93 +299,93 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 400;
-  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 500;
-  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 600;
-  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 700;
-  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
-  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 800;
-  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url(/assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 900;
-  src: url(/assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
-  src: url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Work Sans';
   font-style: italic;
-  src: url(/assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  src: url(/assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: italic;
-  src: url(/assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
 :root {
   --header-bg: #d9d9d9;
@@ -349,31 +408,6 @@ html, body {
 }
 * {
   outline: 1px solid red;
-}
-header {
-  background-color: var(--header-bg);
-  > div {
-    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
-    padding: var(--sidebar-pos-top) 2rem 1rem calc(var(--sidebar-width)/4);
-    h1 {
-      font-family: 'Inter';
-      font-weight: 900;
-      font-size: 3.5rem;
-      letter-spacing: 0.05rem;
-      word-spacing: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      font-style: italic;
-      font-weight: normal;
-      margin: 0 0 1rem 0;
-    }
-    p {
-      font-size: 0.9rem;
-      margin-top: 1.5rem;
-    }
-  }
 }
 main {
   background-color: var(--main-bg);
@@ -424,6 +458,10 @@ main {
   }
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }

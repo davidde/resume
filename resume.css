@@ -7,6 +7,9 @@
   .clip-circle-45 {
     clip-path: circle(45% at 52% 50%);
   }
+  .word-spacing-5 {
+    word-spacing: 0.5rem;
+  }
 }
 
 /* For customizing the dimension, orientation, and margins of printed pages: */
@@ -21,97 +24,97 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 400;
-  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 500;
-  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 600;
-  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 700;
-  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
-  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 800;
-  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url(/assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 900;
-  src: url(/assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
+  src: url(../fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
 }
 
 /* Work Sans Font: */
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
-  src: url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Work Sans';
   font-style: italic;
-  src: url(/assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
 }
 
 /* Inter Font: */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  src: url(/assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: italic;
-  src: url(/assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
 
 :root {
@@ -143,41 +146,6 @@ html, body {
 }
 
 * { outline: 1px solid red; }
-
-/**************************
-*     Header styles:      *
-***************************/
-header {
-  background-color: var(--header-bg);
-
-  > div {
-    margin-left: calc(var(--sidebar-width) + var(--sidebar-pos-left));
-    padding: var(--sidebar-pos-top) 2rem 1rem calc(var(--sidebar-width)/4);
-
-    /* h1 {
-      font-size: 2.6rem;
-      margin-bottom: 0rem;
-    } */
-    h1 {
-      font-family: 'Inter';
-      font-weight: 900;
-      font-size: 3.5rem;
-      letter-spacing: 0.05rem;
-      word-spacing: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      font-style: italic;
-      font-weight: normal;
-      margin: 0 0 1rem 0;
-    }
-    p {
-      font-size: 0.9rem;
-      margin-top: 1.5rem;
-    }
-  }
-}
 
 /**************************
 *       Main styles:      *
