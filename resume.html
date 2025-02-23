@@ -8,19 +8,22 @@
 </head>
 
 <body>
-<aside>
-  <div id='sidebar-top'>
-    <image id='avatar'>
+<aside class='absolute top-[var(--sidebar-pos-top)] left-[var(--sidebar-pos-left)] w-[var(--sidebar-width)] h-full text-[var(--main-bg)]'>
+  <!-- Black circle surrounding avatar: -->
+  <div class='absolute top-0 z-10 h-[var(--sidebar-width)] w-[var(--sidebar-width)] rounded-[50%] bg-[var(--sidebar-bg)]'>
+    <!-- Avatar: -->
+    <image src='./assets/images/avatar-david.png' class='w-[calc(0.75*var(--sidebar-width))] clip-circle-45 my-[1rem] mx-[auto]'>
   </div>
 
-  <div id='sidebar-content'>
-    <h2>CONTACT</h2>
+  <!-- Black sidebar below avatar: -->
+  <div class='absolute top-[calc(var(--sidebar-width)/2)] w-[var(--sidebar-width)] pt-[calc(var(--sidebar-width)/2)] h-full bg-[var(--sidebar-bg)]'>
+    <h2 class='bg-[var(--header-bg)] text-[var(--sidebar-bg)] font-extrabold mt-0'>CONTACT</h2>
     &nbsp;
-    <h2>ABOUT ME</h2>
+    <h2 class='bg-[var(--main-bg)] text-[var(--sidebar-bg)] font-extrabold'>ABOUT ME</h2>
     &nbsp;
-    <h2>SOFT SKILLS</h2>
+    <h2 class='bg-[var(--main-bg)] text-[var(--sidebar-bg)] font-extrabold'>SOFT SKILLS</h2>
     &nbsp;
-    <h2>TECH SKILLS</h2>
+    <h2 class='bg-[var(--main-bg)] text-[var(--sidebar-bg)] font-extrabold'>TECH SKILLS</h2>
   </div>
 </aside>
 

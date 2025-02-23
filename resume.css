@@ -3,6 +3,11 @@
 ***************************/
 @import "tailwindcss";
 
+@layer utilities {
+  .clip-circle-45 {
+    clip-path: circle(45% at 52% 50%);
+  }
+}
 
 /* For customizing the dimension, orientation, and margins of printed pages: */
 @page {
@@ -16,97 +21,97 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url(assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 400;
-  src: url(assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-400-Normal-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url(assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 500;
-  src: url(assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-500-Medium-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 600;
-  src: url(assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-600-SemiBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url(assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 700;
-  src: url(assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-700-Bold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
-  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 800;
-  src: url(assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-800-ExtraBold-Italic.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url(assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-900-Black-Regular.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 900;
-  src: url(assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
+  src: url(/assets/fonts/Poppins/Poppins-900-Black-Italic.ttf) format('woff2');
 }
 
 /* Work Sans Font: */
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
-  src: url(assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+  src: url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Work Sans';
   font-style: italic;
-  src: url(assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(/assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('woff2');
 }
 
 /* Inter Font: */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  src: url(assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
+  src: url(/assets/fonts/Inter/Inter-VariableFont_wght.ttf) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: italic;
-  src: url(assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+  src: url(/assets/fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
 
 :root {
@@ -131,57 +136,13 @@ html, body {
   display: grid;
   grid-template-rows: min-content auto;
   font-family: 'Poppins';
-}
 
-/**************************
-*     Sidebar styles:     *
-***************************/
-aside {
-  position: absolute;
-  top: var(--sidebar-pos-top);
-  left: var(--sidebar-pos-left);
-  width: var(--sidebar-width);
-  height: 100%;
-  color: var(--main-bg);
-
-  h2 {
-    background-color: var(--main-bg);
-    color: var(--sidebar-bg);
-    font-weight: 800;
-
-    &:first-of-type {
-      background-color: var(--header-bg);
-      margin-top: 0;
-    }
-  }
-  #sidebar-top {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    height: var(--sidebar-width);
-    width: var(--sidebar-width);
-    border-radius: 50%;
-    background-color: var(--sidebar-bg);
-
-    #avatar {
-      content: url(assets/images/avatar-david.png);
-      width: calc(0.75 * var(--sidebar-width));
-      clip-path: circle(45% at 52% 50%);
-      display: block;
-      margin: 1rem auto;
-    }
-  }
-  #sidebar-content {
-    position: absolute;
-    top: calc(var(--sidebar-width)/2);
-    width: var(--sidebar-width);
-    padding-top: calc(var(--sidebar-width)/2);
-    height: 100%;
-    background-color: var(--sidebar-bg);
+  ul {
+    list-style: disc outside;
   }
 }
 
-/* * { outline: 1px solid red; } */
+* { outline: 1px solid red; }
 
 /**************************
 *     Header styles:      *
@@ -236,6 +197,7 @@ main {
     li {
       font-size: 0.9rem;
       line-height: 1.3rem;
+      margin-left: 2rem;
       margin-top: 0.75rem;
 
       p {
