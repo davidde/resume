@@ -1,8 +1,6 @@
-/**************************
-*     Generic styles:     *
-***************************/
 @import "tailwindcss";
 
+/* Custom TailwindCSS classes: */
 @layer utilities {
   .clip-circle-45 {
     clip-path: circle(45% at 52% 50%);
@@ -19,6 +17,37 @@
   margin: 0;
 }
 
+:root {
+  --header-bg: #d9d9d9;
+  --sidebar-bg: black;
+  /* --sidebar-bg: #323232; */
+  --main-bg: white;
+  /* --main-bg: #ebebeb; */
+
+  --sidebar-pos-top: 2rem;
+  --sidebar-pos-left: 1rem;
+  --sidebar-width: 30vw;
+  --header-height: 2.2rem;
+}
+
+html, body {
+  /* A4 paper size for printing: */
+  /* width: 210mm;
+  height: 297mm; */
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content auto;
+  font-family: 'Poppins';
+}
+
+/* * { outline: 1px solid red; } */
+
+
+/**************************
+*         Fonts:          *
+***************************/
 /* Poppins Font: */
 @font-face {
   font-family: 'Poppins';
@@ -116,29 +145,3 @@
   font-style: italic;
   src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
-
-:root {
-  --header-bg: #d9d9d9;
-  --sidebar-bg: black;
-  /* --sidebar-bg: #323232; */
-  --main-bg: white;
-  /* --main-bg: #ebebeb; */
-
-  --sidebar-pos-top: 2rem;
-  --sidebar-pos-left: 1rem;
-  --sidebar-width: 30vw;
-}
-
-html, body {
-  /* A4 paper size for printing: */
-  /* width: 210mm;
-  height: 297mm; */
-  min-height: 100vh;
-  max-width: 100%;
-  margin: 0;
-  display: grid;
-  grid-template-rows: min-content auto;
-  font-family: 'Poppins';
-}
-
-/* * { outline: 1px solid red; } */
