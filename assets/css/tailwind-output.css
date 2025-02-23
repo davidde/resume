@@ -6,7 +6,6 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-    --color-indigo-600: oklch(0.511 0.262 276.966);
     --spacing: 0.25rem;
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
@@ -162,9 +161,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
   .absolute {
     position: absolute;
   }
@@ -180,26 +176,11 @@
   .top-\[calc\(var\(--sidebar-width\)\/2\)\] {
     top: calc(var(--sidebar-width) / 2);
   }
-  .left-\[20rem-var\(--header-height\)\/2\] {
-    left: 20rem-var(--header-height)/2;
-  }
   .left-\[calc\(15rem-var\(--header-height\)\/2\)\] {
     left: calc(15rem - var(--header-height) / 2);
   }
-  .left-\[calc\(20rem-var\(--header-height\)\/2\)\] {
-    left: calc(20rem - var(--header-height) / 2);
-  }
   .left-\[calc\(var\(--sidebar-width\)\*0\.7-var\(--header-height\)\/2\)\] {
     left: calc(var(--sidebar-width) * 0.7 - var(--header-height) / 2);
-  }
-  .left-\[calc\(var\(--sidebar-width\)\*0\.65\)\] {
-    left: calc(var(--sidebar-width) * 0.65);
-  }
-  .left-\[calc\(var\(--sidebar-width\)\*0\.65-var\(--header-height\)\)\] {
-    left: calc(var(--sidebar-width) * 0.65 - var(--header-height));
-  }
-  .left-\[calc\(var\(--sidebar-width\)\*0\.65-var\(--header-height\)\/2\)\] {
-    left: calc(var(--sidebar-width) * 0.65 - var(--header-height) / 2);
   }
   .left-\[var\(--sidebar-pos-left\)\] {
     left: var(--sidebar-pos-left);
@@ -233,12 +214,6 @@
   }
   .mt-\[0\.75rem\] {
     margin-top: 0.75rem;
-  }
-  .mt-\[1\.5rem\] {
-    margin-top: 1.5rem;
-  }
-  .mt-\[2rem\] {
-    margin-top: 2rem;
   }
   .mt-\[var\(--sidebar-pos-top\)\] {
     margin-top: var(--sidebar-pos-top);
@@ -276,29 +251,8 @@
   .box-border {
     box-sizing: border-box;
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
-  }
-  .grid {
-    display: grid;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
-  }
-  .table {
-    display: table;
-  }
-  .h-\[2\.2rem\] {
-    height: 2.2rem;
-  }
-  .h-\[2\.4rem\] {
-    height: 2.4rem;
   }
   .h-\[var\(--header-height\)\] {
     height: var(--header-height);
@@ -309,17 +263,11 @@
   .h-full {
     height: 100%;
   }
-  .w-\[2\.4rem\] {
-    width: 2.4rem;
-  }
   .w-\[8rem\] {
     width: 8rem;
   }
   .w-\[15rem\] {
     width: 15rem;
-  }
-  .w-\[20rem\] {
-    width: 20rem;
   }
   .w-\[calc\(0\.75\*var\(--sidebar-width\)\)\] {
     width: calc(0.75 * var(--sidebar-width));
@@ -327,20 +275,11 @@
   .w-\[calc\(var\(--sidebar-width\)\*0\.7\)\] {
     width: calc(var(--sidebar-width) * 0.7);
   }
-  .w-\[calc\(var\(--sidebar-width\)\*0\.65\)\] {
-    width: calc(var(--sidebar-width) * 0.65);
-  }
   .w-\[var\(--header-height\)\] {
     width: var(--header-height);
   }
   .w-\[var\(--sidebar-width\)\] {
     width: var(--sidebar-width);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .list-outside {
     list-style-position: outside;
@@ -356,13 +295,6 @@
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-indigo-600 {
-    border-color: var(--color-indigo-600);
   }
   .bg-\[var\(--header-bg\)\] {
     background-color: var(--header-bg);
@@ -475,20 +407,21 @@
   .italic {
     font-style: italic;
   }
-  .underline {
-    text-decoration-line: underline;
+  .clipcirc-radius-\[45\%\] {
+    --clip-circ-radius: 45%;
+    clip-path: circle(var(--clip-circ-radius) at var(--clip-circ-x) var(--clip-circ-y));
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .clipcirc-x-\[52\%\] {
+    --clip-circ-x: 52%;
   }
-}
-@layer utilities {
-  .clip-circle-45 {
-    clip-path: circle(45% at 52% 50%);
+  .clipcirc-y-\[50\%\] {
+    --clip-circ-y: 50%;
   }
-  .word-spacing-5 {
-    word-spacing: 0.5rem;
+  .wordsp-\[0\.3rem\] {
+    word-spacing: 0.3rem;
+  }
+  .wordsp-\[0\.8rem\] {
+    word-spacing: 0.8rem;
   }
 }
 @page {
@@ -605,11 +538,6 @@ html, body {
   font-style: italic;
   src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -621,9 +549,4 @@ html, body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }

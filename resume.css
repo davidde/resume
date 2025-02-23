@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
-/* Custom TailwindCSS classes: */
-@layer utilities {
-  .clip-circle-45 {
-    clip-path: circle(45% at 52% 50%);
-  }
-  .word-spacing-5 {
-    word-spacing: 0.5rem;
-  }
+/* Custom TailwindCSS utilities with arbitrary values */
+/* See https://tailwindcss.com/docs/adding-custom-styles#functional-utilities */
+@utility wordsp-* {
+    word-spacing: --value([length]);
+}
+
+/* NOTE: for multiple values use underscore _:
+   e.g. p-[1rem_2rem_3rem_4rem]
+      = padding: 1rem 2rem 3rem 4rem
+*/
+@utility clipcirc-radius-* {
+  --clip-circ-radius: --value([percentage]);
+  clip-path: circle(var(--clip-circ-radius) at var(--clip-circ-x) var(--clip-circ-y));
+}
+@utility clipcirc-x-* {
+  --clip-circ-x: --value([percentage]);
+}
+@utility clipcirc-y-* {
+  --clip-circ-y: --value([percentage]);
 }
 
 /* For customizing the dimension, orientation, and margins of printed pages: */
