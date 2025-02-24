@@ -176,20 +176,23 @@
   .top-\[calc\(var\(--sidebar-width\)\/2\)\] {
     top: calc(var(--sidebar-width) / 2);
   }
-  .left-\[calc\(15rem-var\(--header-height\)\/2\)\] {
-    left: calc(15rem - var(--header-height) / 2);
+  .left-\[calc\(15rem-var\(--heading-height\)\/2\)\] {
+    left: calc(15rem - var(--heading-height) / 2);
   }
-  .left-\[calc\(var\(--sidebar-width\)\*0\.7-var\(--header-height\)\/2\)\] {
-    left: calc(var(--sidebar-width) * 0.7 - var(--header-height) / 2);
+  .left-\[calc\(var\(--sidebar-width\)\*0\.7-var\(--heading-height\)\/2\)\] {
+    left: calc(var(--sidebar-width) * 0.7 - var(--heading-height) / 2);
   }
   .left-\[var\(--sidebar-pos-left\)\] {
     left: var(--sidebar-pos-left);
   }
-  .z-0 {
-    z-index: 0;
+  .-z-10 {
+    z-index: calc(10 * -1);
   }
   .z-10 {
     z-index: 10;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .m-0 {
     margin: calc(var(--spacing) * 0);
@@ -254,8 +257,8 @@
   .flex {
     display: flex;
   }
-  .h-\[var\(--header-height\)\] {
-    height: var(--header-height);
+  .h-\[var\(--heading-height\)\] {
+    height: var(--heading-height);
   }
   .h-\[var\(--sidebar-width\)\] {
     height: var(--sidebar-width);
@@ -275,8 +278,8 @@
   .w-\[calc\(var\(--sidebar-width\)\*0\.7\)\] {
     width: calc(var(--sidebar-width) * 0.7);
   }
-  .w-\[var\(--header-height\)\] {
-    width: var(--header-height);
+  .w-\[var\(--heading-height\)\] {
+    width: var(--heading-height);
   }
   .w-\[var\(--sidebar-width\)\] {
     width: var(--sidebar-width);
@@ -398,6 +401,9 @@
     --tw-tracking: 0.05rem;
     letter-spacing: 0.05rem;
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-\[var\(--main-bg\)\] {
     color: var(--main-bg);
   }
@@ -420,6 +426,9 @@
   .wordsp-\[0\.3rem\] {
     word-spacing: 0.3rem;
   }
+  .wordsp-\[0\.5rem\] {
+    word-spacing: 0.5rem;
+  }
   .wordsp-\[0\.8rem\] {
     word-spacing: 0.8rem;
   }
@@ -436,7 +445,7 @@
   --sidebar-pos-top: 2rem;
   --sidebar-pos-left: 1rem;
   --sidebar-width: 30vw;
-  --header-height: 2.2rem;
+  --heading-height: 2.2rem;
 }
 html, body {
   min-height: 100vh;

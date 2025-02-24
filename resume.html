@@ -19,25 +19,33 @@
 
   <!-- Black sidebar below avatar: -->
   <div class='absolute top-[calc(var(--sidebar-width)/2)] w-[var(--sidebar-width)] pt-[calc(var(--sidebar-width)/2)] h-full bg-[var(--sidebar-bg)]'>
-    <h2 class='relative box-border bg-[var(--header-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--header-height)]'>
-      CONTACT
-      <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--header-bg)]' />
-    </h2>
+    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
+      <h2 class='relative box-border bg-[var(--header-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] z-100 whitespace-nowrap'>
+        CONTACT
+        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--header-bg)] -z-10' />
+      </h2>
+    </div>
     &nbsp;
-    <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--header-height)]'>
-      ABOUT ME
-      <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--main-bg)]' />
-    </h2>
+    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
+      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        ABOUT ME
+        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
+      </h2>
+    </div>
     &nbsp;
-    <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--header-height)] z-10'>
-      SOFT SKILLS
-      <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--main-bg)] z-0' />
-    </h2>
+    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
+      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        SOFT SKILLS
+        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
+      </h2>
+    </div>
     &nbsp;
-    <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--header-height)]'>
-      TECH SKILLS
-      <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--main-bg)]' />
-    </h2>
+    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
+      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.2rem] font-extrabold pt-[0.25rem] pb-[0.2rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        TECH SKILLS
+        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
+      </h2>
+    </div>
   </div>
 </aside>
 
@@ -58,9 +66,9 @@
 <main class='bg-[var(--main-bg)]'>
   <div class='mt-0 mr-[0.5rem] mb-0 ml-[calc(var(--sidebar-width)+var(--sidebar-pos-left)-1px)]'>
     <!-- EDUCATION FIELD: -->
-    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--header-height)]'>
+    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
       EDUCATION
-      <div class='absolute top-0 left-[calc(15rem-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
+      <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
     </h2>
     <ul class='list-disc list-outside'>
       <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
@@ -131,9 +139,9 @@
     </ul>
 
     <!-- EXPERIENCE FIELD: -->
-    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--header-height)]'>
+    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
       EXPERIENCE
-      <div class='absolute top-0 left-[calc(15rem-var(--header-height)/2)] h-[var(--header-height)] w-[var(--header-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
+      <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
     </h2>
     <ul class='list-disc list-outside'>
       <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
