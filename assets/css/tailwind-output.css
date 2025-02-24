@@ -162,6 +162,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .absolute {
     position: absolute;
   }
@@ -264,8 +267,14 @@
   .box-border {
     box-sizing: border-box;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -273,8 +282,20 @@
   .inline {
     display: inline;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
+  }
+  .table {
+    display: table;
+  }
   .h-\[1\.5rem\] {
     height: 1.5rem;
+  }
+  .h-\[1\.6rem\] {
+    height: 1.6rem;
   }
   .h-\[1\.45rem\] {
     height: 1.45rem;
@@ -297,6 +318,9 @@
   .w-\[1\.55rem\] {
     width: 1.55rem;
   }
+  .w-\[1\.56rem\] {
+    width: 1.56rem;
+  }
   .w-\[8rem\] {
     width: 8rem;
   }
@@ -315,8 +339,26 @@
   .w-\[var\(--sidebar-width\)\] {
     width: var(--sidebar-width);
   }
+  .min-w-\[1\.5rem\] {
+    min-width: 1.5rem;
+  }
+  .min-w-\[1\.6rem\] {
+    min-width: 1.6rem;
+  }
+  .min-w-\[1\.55rem\] {
+    min-width: 1.55rem;
+  }
+  .min-w-\[1\.56rem\] {
+    min-width: 1.56rem;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
   }
   .list-outside {
     list-style-position: outside;
@@ -338,6 +380,10 @@
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-\[var\(--header-bg\)\] {
     background-color: var(--header-bg);
@@ -471,6 +517,13 @@
   }
   .italic {
     font-style: italic;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .clipcirc-radius-\[45\%\] {
     --clip-circ-radius: 45%;
@@ -631,6 +684,11 @@ html, body {
   inherits: false;
   initial-value: skewY(0);
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -642,4 +700,9 @@ html, body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
