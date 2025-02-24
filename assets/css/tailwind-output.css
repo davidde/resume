@@ -8,6 +8,7 @@
     monospace;
     --spacing: 0.25rem;
     --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
@@ -161,6 +162,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .absolute {
     position: absolute;
   }
@@ -254,8 +258,29 @@
   .box-border {
     box-sizing: border-box;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[1rem\] {
+    height: 1rem;
   }
   .h-\[var\(--heading-height\)\] {
     height: var(--heading-height);
@@ -265,6 +290,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-\[1rem\] {
+    width: 1rem;
   }
   .w-\[8rem\] {
     width: 8rem;
@@ -284,11 +312,23 @@
   .w-\[var\(--sidebar-width\)\] {
     width: var(--sidebar-width);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
+  }
   .list-outside {
     list-style-position: outside;
   }
   .list-disc {
     list-style-type: disc;
+  }
+  .list-image-\[url\(\/assets\/images\/phone-icon\.svg\)\] {
+    list-style-image: url(/assets/images/phone-icon.svg);
   }
   .flex-row {
     flex-direction: row;
@@ -299,6 +339,10 @@
   .rounded-\[50\%\] {
     border-radius: 50%;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-\[var\(--header-bg\)\] {
     background-color: var(--header-bg);
   }
@@ -307,6 +351,18 @@
   }
   .bg-\[var\(--sidebar-bg\)\] {
     background-color: var(--sidebar-bg);
+  }
+  .fill-current {
+    fill: currentColor;
+  }
+  .py-\[0\.75rem\] {
+    padding-block: 0.75rem;
+  }
+  .py-\[1rem\] {
+    padding-block: 1rem;
+  }
+  .py-\[2rem\] {
+    padding-block: 2rem;
   }
   .pt-\[0\.6rem\] {
     padding-top: 0.6rem;
@@ -347,6 +403,18 @@
   .font-\[Work-Sans\] {
     font-family: Work-Sans;
   }
+  .text-\[0\.5rem\] {
+    font-size: 0.5rem;
+  }
+  .text-\[0\.6rem\] {
+    font-size: 0.6rem;
+  }
+  .text-\[0\.7rem\] {
+    font-size: 0.7rem;
+  }
+  .text-\[0\.8rem\] {
+    font-size: 0.8rem;
+  }
   .text-\[0\.9rem\] {
     font-size: 0.9rem;
   }
@@ -385,6 +453,10 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
@@ -412,6 +484,13 @@
   }
   .italic {
     font-style: italic;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .clipcirc-radius-\[45\%\] {
     --clip-circ-radius: 45%;
@@ -547,6 +626,36 @@ html, body {
   font-style: italic;
   src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -558,4 +667,9 @@ html, body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
