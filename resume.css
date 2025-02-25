@@ -41,23 +41,29 @@
   --main-bg: white;
   /* --main-bg: #ebebeb; */
 
-  --sidebar-pos-top: 2rem;
-  --sidebar-pos-left: 1rem;
-  --sidebar-width: 33vw;
+  --sidebar-margin-top: 0.5rem;
+  --sidebar-margin-left: 1rem;
+  --sidebar-width: 36vw;
+  --header-margin-top: 3rem;
+  --header-padding-left: 3rem;
   --heading-height: 2.2rem;
 }
 
-html, body {
+html {
   /* A4 paper size for printing: */
   /* width: 210mm;
   height: 297mm; */
-  min-height: 150vh;
+  font-family: 'Poppins';
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
   max-width: 100%;
   position: relative;
   margin: 0;
   display: grid;
   grid-template-rows: min-content auto;
-  font-family: 'Poppins';
 }
 
 /* * { outline: 1px solid red; } */

@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>Page Title</title>
+  <title>Resume</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link rel='stylesheet' href='assets/css/tailwind-output.css'>
 </head>
@@ -10,7 +10,7 @@
 <body>
 
 <!-- Sidebar with avatar: -->
-<aside class='absolute mt-[var(--sidebar-pos-top)] left-[var(--sidebar-pos-left)] w-[var(--sidebar-width)] h-full min-h-full text-[var(--main-bg)] text-[0.8rem]'>
+<aside class='absolute mt-[var(--sidebar-margin-top)] left-[var(--sidebar-margin-left)] w-[var(--sidebar-width)] h-full min-h-full text-[var(--main-bg)] text-[0.8rem]'>
   <!-- Black circle surrounding avatar: -->
   <div class='absolute top-0 z-10 h-[var(--sidebar-width)] w-[var(--sidebar-width)] rounded-[50%] bg-[var(--sidebar-bg)]'>
     <!-- Avatar: -->
@@ -173,12 +173,11 @@ Illustrator, Krita, Inkscape, Solidworks
 
 <!-- Header with name, function and description: -->
 <header class='bg-[var(--header-bg)]'>
-  <div class='ml-[calc(var(--sidebar-width)+var(--sidebar-pos-left))] pt-[var(--sidebar-pos-top)] pr-[2rem] pb-[1rem] pl-[calc(var(--sidebar-width)/4)]'>
+  <div class='ml-[calc(var(--sidebar-width)+var(--sidebar-margin-left))] pt-[var(--header-margin-top)] pr-[2rem] pb-[0.5rem] pl-[var(--header-padding-left)]'>
     <h1 class='font-[Inter] font-black text-[3.5rem] tracking-[0.05rem] wordsp-[0.8rem]'>David Deprost</h1>
-    <h2 class='text-[1.3rem] italic font-normal
-    mt-0 mr-0 mb-[1rem] ml-0 wordsp-[0.3rem]'>.NET DEVELOPER</h2>
+    <h2 class='text-[1.3rem] italic font-normal mt-[0.25rem] mr-0 mb-[1.25rem] ml-0 wordsp-[0.3rem]'>.NET DEVELOPER</h2>
     <hr>
-    <p class='text-[0.9rem] my-[1.5rem]'>
+    <p class='text-[0.9rem] my-[1.75rem]'>
       I am a creative developer with a passion for design. I love putting efficient code behind an intuitive user interface. I always strive for the optimal solution in function of maintainability vs performance. I have a very broad interest in technology, science and society, and I'm always looking to learn more. I very much enjoy being part of a team.
     </p>
   </div>
@@ -186,149 +185,158 @@ Illustrator, Krita, Inkscape, Solidworks
 
 <!-- Main content with Education and Experience: -->
 <main class='bg-[var(--main-bg)] text-[0.9rem]'>
-  <div class='mt-0 mr-[0.5rem] mb-0 ml-[calc(var(--sidebar-width)+var(--sidebar-pos-left)-1px)]'>
+  <!-- Main content corrected to the right of sidebar: -->
+  <div class='m-[0_0.5rem_0_calc(var(--sidebar-width)+var(--sidebar-margin-left)-1px)]'>
     <!-- EDUCATION FIELD: -->
-    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
-      EDUCATION
-      <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
-    </h2>
-    <ul class='list-disc list-outside'>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2024 - heden
-          </span>
-          <span class='font-semibold'>
-            Gegradueerde Elektromechanische systemen
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          Odisee Gent, in opleiding eerste fase
-        </p>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2022 - 2023
-          </span>
-          <span class='font-semibold'>
-            Opleiding .NET developer met C#
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          VDAB, certificaat behaald
-        </p>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2011 - 2013
-          </span>
-          <span class='font-semibold'>
-            Biologie
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          VUB, vakken gevolgd
-        </p>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2004 - 2005
-          </span>
-          <span class='font-semibold'>
-            Bio-ingenieur
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          Ugent, vakken gevolgd
-        </p>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            1998 - 2004
-          </span>
-          <span class='font-semibold'>
-            ASO Wetenschappen - Wiskunde
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          Sint-Barbaracollege, diploma behaald
-        </p>
-      </li>
-    </ul>
+    <div class='mt-[2rem]'>
+      <div>
+        <div class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
+          <h2>EDUCATION</h2>
+          <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
+        </div>
+      </div>
+      <ul class='list-disc list-outside'>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic flex-[0_0_8rem]'>
+              2024 - heden
+            </span>
+            <span class='font-semibold'>
+              Gegradueerde Elektromechanische systemen
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            Odisee Gent, in opleiding eerste fase
+          </p>
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2022 - 2023
+            </span>
+            <span class='font-semibold'>
+              Opleiding .NET developer met C#
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            VDAB, certificaat behaald
+          </p>
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2011 - 2013
+            </span>
+            <span class='font-semibold'>
+              Biologie
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            VUB, vakken gevolgd
+          </p>
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2004 - 2005
+            </span>
+            <span class='font-semibold'>
+              Bio-ingenieur
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            Ugent, vakken gevolgd
+          </p>
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              1998 - 2004
+            </span>
+            <span class='font-semibold'>
+              ASO Wetenschappen - Wiskunde
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            Sint-Barbaracollege, diploma behaald
+          </p>
+        </li>
+      </ul>
+    </div>
 
     <!-- EXPERIENCE FIELD: -->
-    <h2 class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
-      EXPERIENCE
-      <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
-    </h2>
-    <ul class='list-disc list-outside'>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2020 - 2021
+    <div class='mt-[2.5rem]'>
+      <div>
+        <div class='relative box-border bg-[var(--sidebar-bg)] text-[var(--main-bg)] text-[1.1rem] font-extrabold pt-[0.6rem] pb-[0.5rem] pl-[2.5rem] leading-none tracking-[0.1rem] my-[2rem] w-[15rem] h-[var(--heading-height)]'>
+          <h2>EXPERIENCE</h2>
+          <div class='absolute top-0 left-[calc(15rem-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--sidebar-bg)]' />
+        </div>
+      </div>
+      <ul class='list-disc list-outside'>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2020 - 2021
+            </span>
+            <span class='font-semibold'>
+              Vrijwilligerswerk Tanzania
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            Golden Dream Safaris
+          </p>
+          <span>
+            <ul class='list-disc list-outside mt-[0.5rem] ml-[9rem]'>
+              <li class='text-[0.75rem] mt-0 leading-[1.4]'>
+                Ontwikkelen van website
+              </li>
+              <li class='text-[0.75rem] mt-0 leading-[1.4]'>
+                Ontwikkelen van quotation tool
+              </li>
+            </ul>
           </span>
-          <span class='font-semibold'>
-            Vrijwilligerswerk Tanzania
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2018 - 2019
+            </span>
+            <span class='font-semibold'>
+              Open-source development
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            Github, verschillende React.js-projecten
+          </p>
+        </li>
+        <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
+          <p class='flex flex-row m-0'>
+            <span class='font-[Work-Sans] italic w-[8rem]'>
+              2016 - 2017
+            </span>
+            <span class='font-semibold'>
+              Python developer
+            </span>
+          </p>
+          <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
+            TLCC
+          </p>
+          <span>
+            <ul class='list-disc list-outside mt-[0.5rem] ml-[9rem]'>
+              <li class='text-[0.75rem] mt-0 leading-[1.4]'>
+                Development en maintenance van Ediflex, een ETL platform voor de transport- en logistiek sector
+              </li>
+              <li class='text-[0.75rem] mt-0 leading-[1.4]'>
+                Troubleshooting van runtime errors in Ediflex
+              </li>
+              <li class='text-[0.75rem] mt-0 leading-[1.4]'>
+                Opvolging en support voor klanten
+              </li>
+            </ul>
           </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          Golden Dream Safaris
-        </p>
-        <span>
-          <ul class='list-disc list-outside mt-[0.5rem] ml-[9rem]'>
-            <li class='text-[0.75rem] mt-0 leading-[1.4]'>
-              Ontwikkelen van website
-            </li>
-            <li class='text-[0.75rem] mt-0 leading-[1.4]'>
-              Ontwikkelen van quotation tool
-            </li>
-          </ul>
-        </span>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2018 - 2019
-          </span>
-          <span class='font-semibold'>
-            Open-source development
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          Github, verschillende React.js-projecten
-        </p>
-      </li>
-      <li class='leading-[1.3rem] ml-[2rem] mt-[0.75rem]'>
-        <p class='flex flex-row m-0'>
-          <span class='font-[Work-Sans] italic w-[8rem]'>
-            2016 - 2017
-          </span>
-          <span class='font-semibold'>
-            Python developer
-          </span>
-        </p>
-        <p class='flex flex-row m-0 font-[Inter] italic ml-[8rem]'>
-          TLCC
-        </p>
-        <span>
-          <ul class='list-disc list-outside mt-[0.5rem] ml-[9rem]'>
-            <li class='text-[0.75rem] mt-0 leading-[1.4]'>
-              Development en maintenance van Ediflex, een ETL platform voor de transport- en logistiek sector
-            </li>
-            <li class='text-[0.75rem] mt-0 leading-[1.4]'>
-              Troubleshooting van runtime errors in Ediflex
-            </li>
-            <li class='text-[0.75rem] mt-0 leading-[1.4]'>
-              Opvolging en support voor klanten
-            </li>
-          </ul>
-        </span>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </main>
 </body>
