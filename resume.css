@@ -51,8 +51,9 @@ html, body {
   /* A4 paper size for printing: */
   /* width: 210mm;
   height: 297mm; */
-  min-height: 100vh;
+  min-height: 150vh;
   max-width: 100%;
+  position: relative;
   margin: 0;
   display: grid;
   grid-template-rows: min-content auto;
