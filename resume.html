@@ -10,7 +10,7 @@
 <body>
 
 <!-- Sidebar with avatar: -->
-<aside class='absolute mt-[var(--sidebar-pos-top)] left-[var(--sidebar-pos-left)] w-[var(--sidebar-width)] h-full text-[var(--main-bg)]'>
+<aside class='absolute mt-[var(--sidebar-pos-top)] left-[var(--sidebar-pos-left)] w-[var(--sidebar-width)] h-full min-h-full text-[var(--main-bg)]'>
   <!-- Black circle surrounding avatar: -->
   <div class='absolute top-0 z-10 h-[var(--sidebar-width)] w-[var(--sidebar-width)] rounded-[50%] bg-[var(--sidebar-bg)]'>
     <!-- Avatar: -->
@@ -18,14 +18,14 @@
   </div>
 
   <!-- Black sidebar below avatar: -->
-  <div class='absolute top-[calc(var(--sidebar-width)/2)] w-[var(--sidebar-width)] pt-[calc(var(--sidebar-width)/3+1.5rem)] h-full bg-[var(--sidebar-bg)]'>
+  <div class='absolute top-[calc(var(--sidebar-width)/2)] h-full min-h-full w-[var(--sidebar-width)] pt-[calc(var(--sidebar-width)/3+1.5rem)] bg-[var(--sidebar-bg)]'>
     <div class='w-[calc(var(--sidebar-width)*0.7)]'>
-      <h2 class='relative box-border bg-[var(--header-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[2.75rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] z-100 whitespace-nowrap'>
-        CONTACT
+      <div class='relative box-border bg-[var(--header-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[2.75rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] z-100 whitespace-nowrap'>
+        <h2>CONTACT</h2>
         <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--header-bg)] -z-10' />
-      </h2>
+      </div>
     </div>
-    <div class='text-[0.85rem] font-medium ml-[1rem] py-[0.85rem] flex flex-col gap-[0.5rem]'>
+    <div class='text-[0.85rem] font-medium ml-[1rem] py-[0.85rem] flex flex-col gap-[0.5rem] w-[calc(var(--sidebar-width)-1rem)]'>
       <p class='flex flex-row'>
         <!-- Phone Icon: -->
         <svg class='fill-[var(--header-bg)] w-[1.5rem] min-w-[1.5rem]' xmlns="http://www.w3.org/2000/svg" xml:space="preserve" overflow="hidden" viewBox="0 0 24 24">
@@ -88,24 +88,85 @@
       </p>
     </div>
     <div class='w-[calc(var(--sidebar-width)*0.7)]'>
-      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-[1rem] w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
-        ABOUT ME
+      <div class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-[1rem] w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        <h2>ABOUT ME</h2>
         <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
-      </h2>
+      </div>
     </div>
-    &nbsp;
-    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
-      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
-        SOFT SKILLS
-        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
-      </h2>
+    <div class='text-[0.85rem] font-normal py-[0.85rem] flex flex-col gap-[0.5rem] w-[var(--sidebar-width)]'>
+      <ul class='inline-block list-disc list-outside'>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem]'>
+          <b>Belg</b>, ° 19 december 1986
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          <div class=''>
+            <b>Talen:</b>
+            <ul class='ml-[1.5rem] list-disc list-outside'>
+              <li>
+                Nederlands: moedertaal
+              </li>
+              <li>
+                Engels: zeer goed (mondeling/schriftelijk)
+              </li>
+              <li>
+                Frans: basiskennis
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] my-[0.3rem]'>
+          <b>Rijbewijs B</b>, eigen wagen
+        </li>
+      </ul>
     </div>
-    &nbsp;
     <div class='w-[calc(var(--sidebar-width)*0.7)]'>
-      <h2 class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
-        TECH SKILLS
+      <div class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        <h2>SOFT SKILLS</h2>
         <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
-      </h2>
+      </div>
+    </div>
+    <div class='text-[0.85rem] font-normal py-[0.85rem] flex flex-col gap-[0.5rem] w-[var(--sidebar-width)]'>
+      <ul class='list-disc list-outside'>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem]'>
+          Creatieve probleemoplosser
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Oog voor detail en leergierig
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Constructief, werkt graag in team
+        </li>
+      </ul>
+    </div>
+    <div class='w-[calc(var(--sidebar-width)*0.7)]'>
+      <div class='relative box-border bg-[var(--main-bg)] text-[var(--sidebar-bg)] text-[1.4rem] font-extrabold pt-[0.15rem] pb-[0.25rem] pl-[1.5rem] mt-0 w-[calc(var(--sidebar-width)*0.7)] h-[var(--heading-height)] wordsp-[0.5rem] z-100 whitespace-nowrap'>
+        <h2>TECH SKILLS</h2>
+        <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--heading-height)/2)] h-[var(--heading-height)] w-[var(--heading-height)] rounded-[50%] bg-[var(--main-bg)] -z-10' />
+      </div>
+    </div>
+    <div class='text-[0.85rem] font-medium py-[0.85rem] flex flex-col gap-[0.5rem] w-[var(--sidebar-width)]'>
+      <ul class='list-disc list-outside'>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem]'>
+          .NET development: C#, WPF, ADO.NET, Entity Framework, Unity Engine, etc.
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Frontend development: Javascript, Typescript, React, Nextjs, TailwindCSS, sass, NPM
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Database management: SQL Server,
+PostgreSQL, MySQL
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Linux & scripting: Python, BASH, zshell, Powershell
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Agile methodologies & Scrum
+        </li>
+        <li class='text-[0.9rem] leading-[1.3rem] ml-[2rem] mt-[0.3rem]'>
+          Design: Adobe Photoshop &
+Illustrator, Krita, Inkscape, Solidworks
+        </li>
+      </ul>
     </div>
   </div>
 </aside>

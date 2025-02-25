@@ -10,6 +10,12 @@
    e.g. p-[1rem_2rem_3rem_4rem]
       = padding: 1rem 2rem 3rem 4rem
 */
+/* This works also, but gives vscode error:
+   (call with: `clipcirc-[45%_at_52%_50%]`)
+@utility clipcirc-* {
+  clip-path: circle(--value([*]));
+}
+*/
 @utility clipcirc-radius-* {
   --clip-circ-radius: --value([percentage]);
   clip-path: circle(var(--clip-circ-radius) at var(--clip-circ-x) var(--clip-circ-y));
