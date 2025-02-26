@@ -162,9 +162,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
   .absolute {
     position: absolute;
   }
@@ -267,14 +264,8 @@
   .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-margin-left\)\)\] {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-margin-left));
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
-  }
-  .grid {
-    display: grid;
   }
   .hidden {
     display: none;
@@ -285,15 +276,6 @@
   .inline-block {
     display: inline-block;
   }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
-  }
-  .table {
-    display: table;
-  }
   .h-\[1\.5rem\] {
     height: 1.5rem;
   }
@@ -303,20 +285,23 @@
   .h-\[1\.45rem\] {
     height: 1.45rem;
   }
+  .h-\[calc\(100\%-var\(--sidebar-margin-top\)\)\] {
+    height: calc(100% - var(--sidebar-margin-top));
+  }
   .h-\[var\(--heading-height\)\] {
     height: var(--heading-height);
   }
   .h-\[var\(--sidebar-width\)\] {
     height: var(--sidebar-width);
   }
-  .h-auto {
-    height: auto;
-  }
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
+  }
+  .min-h-\[calc\(100\%-var\(--sidebar-width\)\)\] {
+    min-height: calc(100% - var(--sidebar-width));
   }
   .min-h-full {
     min-height: 100%;
@@ -368,9 +353,6 @@
   }
   .flex-\[0_0_8rem\] {
     flex: 0 0 8rem;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -538,13 +520,6 @@
   .italic {
     font-style: italic;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .clipcirc-radius-\[45\%\] {
     --clip-circ-radius: 45%;
     clip-path: circle(var(--clip-circ-radius) at var(--clip-circ-x) var(--clip-circ-y));
@@ -586,7 +561,6 @@ html {
   font-size: 16px;
 }
 body {
-  min-height: 100vh;
   max-width: 100%;
   position: relative;
   margin: 0;
@@ -726,9 +700,4 @@ body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
