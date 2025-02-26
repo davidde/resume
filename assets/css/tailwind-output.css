@@ -213,9 +213,6 @@
   .my-\[1rem\] {
     margin-block: 1rem;
   }
-  .my-\[2rem\] {
-    margin-block: 2rem;
-  }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
@@ -233,9 +230,6 @@
   }
   .mt-\[1rem\] {
     margin-top: 1rem;
-  }
-  .mt-\[2\.5rem\] {
-    margin-top: 2.5rem;
   }
   .mt-\[2rem\] {
     margin-top: 2rem;
@@ -384,6 +378,9 @@
   .rounded-\[50\%\] {
     border-radius: 50%;
   }
+  .bg-\[inherit\] {
+    background-color: inherit;
+  }
   .bg-\[var\(--header-bg\)\] {
     background-color: var(--header-bg);
   }
@@ -399,11 +396,11 @@
   .py-\[0\.85rem\] {
     padding-block: 0.85rem;
   }
+  .pt-\[0\.1rem\] {
+    padding-top: 0.1rem;
+  }
   .pt-\[0\.3rem\] {
     padding-top: 0.3rem;
-  }
-  .pt-\[0\.6rem\] {
-    padding-top: 0.6rem;
   }
   .pt-\[0\.15rem\] {
     padding-top: 0.15rem;
@@ -456,9 +453,6 @@
   .text-\[0\.75rem\] {
     font-size: 0.75rem;
   }
-  .text-\[1\.1rem\] {
-    font-size: 1.1rem;
-  }
   .text-\[1\.3rem\] {
     font-size: 1.3rem;
   }
@@ -475,10 +469,6 @@
   .leading-\[1\.4\] {
     --tw-leading: 1.4;
     line-height: 1.4;
-  }
-  .leading-none {
-    --tw-leading: 1;
-    line-height: 1;
   }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
