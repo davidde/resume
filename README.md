@@ -7,9 +7,8 @@
 
 &nbsp;
 > [!IMPORTANT]
-> Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meanig no javascript or node.js is involved.  
-> We're currently working on **Windows 11**.
-> 
+> * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meanig no javascript or node.js is involved. We're currently working on **Windows 11**.
+> * Because the HTML gets large really fast, we're opting to split it into several web component templates, which can then be filled with the data from a `.json` file.
 &nbsp;
 
 ## Installing TailwindCSS
@@ -44,3 +43,13 @@
   =>
   src: url(../fonts/Inter/Inter-VariableFont_wght.ttf)
   ```
+
+## Web component set-up
+The web components are created by the `fragment-template.js` file, using the following templates:
+* `header-template.html`
+* `main-template.html`
+* `sidebar-template.html`
+
+These web components are then called like e.g. `<fragment-template fragment='sidebar'>` in the `dutch/index.html` and `english/index.html` files.
+
+Note that this will not work when just opening the files in the browser; a server needs to be running. You can simply use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
