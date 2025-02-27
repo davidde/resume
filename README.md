@@ -1,14 +1,16 @@
 # Resume
+> [!NOTE]
+> This entire endeavour has been slightly more complicated than I had anticipated.  
+> At least now I know why people generally don't write their resumes in HTML + CSS... 😬
+
 ## Project Goal
-* Recreate my fancy [Canva](https://www.canva.com) resume in pure HTML + CSS.
-* Test PDF export.
-* Ultimately, creating a vscode extension for **markdown resume to pdf conversion** with a live preview (similar to `Markdown PDF` + `Markdown Preview Github Styling`).  
-  This will likely involve digging into existing markdown to HTML parsers and try to nudge them in the right direction for a better html resume layout. Look into [PANDOC](https://pandoc.org/MANUAL.html) first, as well as [Markdown PDF](https://github.com/yzane/vscode-markdown-pdf) and [Markdown Preview Github Styling](https://github.com/mjbvz/vscode-github-markdown-preview-style).
+* Recreate my [canva](https://www.canva.com) resume in pure HTML + CSS.
+* Optimize the code for a clean single page "Print to PDF" export.
 
 &nbsp;
 > [!IMPORTANT]
-> * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meanig no javascript or node.js is involved. We're currently working on **Windows 11**.
-> * Because the HTML gets large really fast, we're opting to split it into several web component templates, which can then be filled with the data from a `.json` file.
+> * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meaning no javascript or node.js is involved. We're currently working on **Windows 11**.
+> * Because the HTML gets large really fast (especially with inlined svg's), we're opting to split it into several web component templates, which can then be filled with data from a `.json` file.
 &nbsp;
 
 ## Installing TailwindCSS
@@ -47,4 +49,4 @@ The web components are created by the `fragment-template.js` file, using the fol
 
 These web components are then called like e.g. `<fragment-template fragment='sidebar'>` in the `dutch/index.html` and `english/index.html` files.
 
-Note that this will not work when just opening the files in the browser; a server needs to be running. You can simply use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
+Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
