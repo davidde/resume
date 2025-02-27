@@ -58,7 +58,6 @@ html {
 }
 
 body {
-  height: min-content;
   min-height: 100vh;
   max-width: 100%;
   position: relative;
@@ -67,7 +66,7 @@ body {
   grid-template-rows: min-content min-content;
 }
 
-* { outline: 1px solid red; }
+/* * { outline: 1px solid red; opacity: 1 !important; visibility: visible !important; } */
 
 
 /**************************
