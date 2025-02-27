@@ -270,9 +270,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .inline-block {
     display: inline-block;
   }
@@ -297,8 +294,17 @@
   .h-full {
     height: 100%;
   }
+  .h-min {
+    height: min-content;
+  }
   .h-screen {
     height: 100vh;
+  }
+  .max-h-\[calc\(100\%-var\(--sidebar-margin-top\)\)\] {
+    max-height: calc(100% - var(--sidebar-margin-top));
+  }
+  .max-h-min {
+    max-height: min-content;
   }
   .min-h-\[calc\(100\%-var\(--sidebar-width\)\)\] {
     min-height: calc(100% - var(--sidebar-width));
@@ -359,9 +365,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .list-outside {
     list-style-position: outside;
@@ -429,6 +432,9 @@
   }
   .pt-\[0\.3rem\] {
     padding-top: 0.3rem;
+  }
+  .pt-\[0\.85rem\] {
+    padding-top: 0.85rem;
   }
   .pt-\[calc\(var\(--sidebar-width\)\/3\+1\.5rem\)\] {
     padding-top: calc(var(--sidebar-width) / 3 + 1.5rem);
@@ -561,11 +567,16 @@ html {
   font-size: 16px;
 }
 body {
+  height: min-content;
+  min-height: 100vh;
   max-width: 100%;
   position: relative;
   margin: 0;
   display: grid;
-  grid-template-rows: min-content auto;
+  grid-template-rows: min-content min-content;
+}
+* {
+  outline: 1px solid red;
 }
 @font-face {
   font-family: 'Poppins';

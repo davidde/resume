@@ -24,25 +24,20 @@
   ```
 * Start a watcher to compile Tailwind on the fly, so you don't have to run `tailwindcss` after every code change:
   ```powershell
-  tailwindcss -i resume.css -o assets/css/tailwind-output.css --watch
+  tailwindcss -i assets/css/main.css -o assets/css/tailwind-output.css --watch
 
   # To compile and minify the CSS for production:
-  # tailwindcss -i resume.css -o assets/css/tailwind-output.css --minify
+  # tailwindcss -i assets/css/main.css -o assets/css/tailwind-output.css --minify
   ```
 * Update the linked stylesheet in the html:
   ```html
   <!-- Replace the input stylesheet: -->
-  <!-- <link rel='stylesheet' href='resume.css'> -->
+  <!-- <link rel='stylesheet' href='assets/css/main.css'> -->
 
   <!-- with the output stylesheet: -->
   <link rel='stylesheet' href='assets/css/tailwind-output.css'>
   ```
-  Note that `src` paths in the CSS file will not be updated by Tailwind, so you need to manually replace paths like this:
-  ```
-  src: url(assets/fonts/Inter/Inter-VariableFont_wght.ttf)
-  =>
-  src: url(../fonts/Inter/Inter-VariableFont_wght.ttf)
-  ```
+  Note that if the input and output CSS files are not in the same folder, the `src` paths (e.g. for images and fonts) in the CSS file will not be updated by Tailwind, so you'll need to manually update them.
 
 ## Web component set-up
 The web components are created by the `fragment-template.js` file, using the following templates:
