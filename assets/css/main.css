@@ -35,12 +35,10 @@
 }
 
 :root {
-  --accent-color: #a39f9f;
+  --accent-color: #b2afaf;
   --header-bg: #d9d9d9;
   --sidebar-bg: black;
-  /* --sidebar-bg: #323232; */
   --main-bg: white;
-  /* --main-bg: #ebebeb; */
 
   --sidebar-margin-top: 1rem;
   --sidebar-margin-left: 1.5rem;
@@ -49,12 +47,7 @@
   --header-padding-left: 4.5rem;
   --sidebar-heading-height: 2.6em;
   --main-heading-height: 2.7em;
-}
 
-html {
-  /* A4 paper size for printing: */
-  /* width: 210mm;
-  height: 297mm; */
   font-family: 'Poppins';
   font-size: 10px;
 }
