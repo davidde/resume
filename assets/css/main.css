@@ -35,18 +35,20 @@
 }
 
 :root {
+  --accent-color: #a39f9f;
   --header-bg: #d9d9d9;
   --sidebar-bg: black;
   /* --sidebar-bg: #323232; */
   --main-bg: white;
   /* --main-bg: #ebebeb; */
 
-  --sidebar-margin-top: 0.5rem;
-  --sidebar-margin-left: 1rem;
+  --sidebar-margin-top: 1rem;
+  --sidebar-margin-left: 1.5rem;
   --sidebar-width: 36vw;
-  --header-margin-top: 3rem;
-  --header-padding-left: 3rem;
-  --heading-height: 2.2rem;
+  --header-margin-top: 4.5rem;
+  --header-padding-left: 4.5rem;
+  --sidebar-heading-height: 2.6em;
+  --main-heading-height: 2.7em;
 }
 
 html {
@@ -54,7 +56,7 @@ html {
   /* width: 210mm;
   height: 297mm; */
   font-family: 'Poppins';
-  font-size: 16px;
+  font-size: 10px;
 }
 
 body {
@@ -64,6 +66,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: min-content min-content;
+  font-size: 1.5rem;
 }
 
 /* * { outline: 1px solid red; opacity: 1 !important; visibility: visible !important; } */
