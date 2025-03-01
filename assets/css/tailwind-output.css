@@ -6,6 +6,7 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-red-600: oklch(0.577 0.245 27.325);
     --spacing: 0.25rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -181,8 +182,29 @@
   .top-\[0\.8em\] {
     top: 0.8em;
   }
+  .top-\[50\%\] {
+    top: 50%;
+  }
   .top-\[calc\(var\(--sidebar-width\)\/2\)\] {
     top: calc(var(--sidebar-width) / 2);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-\[50\%\] {
+    left: 50%;
+  }
+  .left-\[70\%\] {
+    left: 70%;
+  }
+  .left-\[71\%\] {
+    left: 71%;
+  }
+  .left-\[72\%\] {
+    left: 72%;
+  }
+  .left-\[75\%\] {
+    left: 75%;
   }
   .left-\[calc\(0\.5em-0\.05rem\)\] {
     left: calc(0.5em - 0.05rem);
@@ -271,9 +293,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .inline-flex {
     display: inline-flex;
   }
@@ -301,17 +320,8 @@
   .h-\[1\.85em\] {
     height: 1.85em;
   }
-  .h-\[11px\] {
-    height: 11px;
-  }
-  .h-\[12px\] {
-    height: 12px;
-  }
-  .h-\[13px\] {
-    height: 13px;
-  }
-  .h-\[14px\] {
-    height: 14px;
+  .h-\[20px\] {
+    height: 20px;
   }
   .h-\[calc\(100\%-1\.3em\)\] {
     height: calc(100% - 1.3em);
@@ -343,8 +353,14 @@
   .w-\[1\.85em\] {
     width: 1.85em;
   }
+  .w-\[15px\] {
+    width: 15px;
+  }
   .w-\[18em\] {
     width: 18em;
+  }
+  .w-\[20px\] {
+    width: 20px;
   }
   .w-\[calc\(0\.75\*var\(--sidebar-width\)\)\] {
     width: calc(0.75 * var(--sidebar-width));
@@ -373,11 +389,151 @@
   .min-w-\[1\.85em\] {
     min-width: 1.85em;
   }
+  .min-w-\[15px\] {
+    min-width: 15px;
+  }
   .flex-\[0_0_13rem\] {
     flex: 0 0 13rem;
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .translate-\[-50\%\] {
+    --tw-translate-x: -50%;
+    --tw-translate-y: -50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-\[-55\%\] {
+    --tw-translate-x: -55%;
+    --tw-translate-y: -55%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-\[-56\%_-100\%\] {
+    --tw-translate-x: -56% -100%;
+    --tw-translate-y: -56% -100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-\[-57\%\] {
+    --tw-translate-x: -57%;
+    --tw-translate-y: -57%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-\[50\%\] {
+    --tw-translate-x: 50%;
+    --tw-translate-y: 50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-0\%\] {
+    --tw-translate-x: -0%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-1\%\] {
+    --tw-translate-x: -1%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-2\%\] {
+    --tw-translate-x: -2%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-50\%\] {
+    --tw-translate-x: -50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-54\%\] {
+    --tw-translate-x: -54%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-56\%\] {
+    --tw-translate-x: -56%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-58\%\] {
+    --tw-translate-x: -58%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-60\%\] {
+    --tw-translate-x: -60%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-62\%\] {
+    --tw-translate-x: -62%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-63\%\] {
+    --tw-translate-x: -63%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-65\%\] {
+    --tw-translate-x: -65%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-67\%\] {
+    --tw-translate-x: -67%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-68\%\] {
+    --tw-translate-x: -68%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-69\%\] {
+    --tw-translate-x: -69%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-70\%\] {
+    --tw-translate-x: -70%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-85\%\] {
+    --tw-translate-y: -85%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-90\%\] {
+    --tw-translate-y: -90%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-100\%\] {
+    --tw-translate-y: -100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-135\%\] {
+    --tw-translate-y: -135%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-138\%\] {
+    --tw-translate-y: -138%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-140\%\] {
+    --tw-translate-y: -140%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-150\%\] {
+    --tw-translate-y: -150%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-160\%\] {
+    --tw-translate-y: -160%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-200\%\] {
+    --tw-translate-y: -200%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-270\%\] {
+    --tw-translate-y: -270%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-370\%\] {
+    --tw-translate-y: -370%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-400\%\] {
+    --tw-translate-y: -400%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-500\%\] {
+    --tw-translate-y: -500%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -426,9 +582,6 @@
   }
   .overflow-hidden {
     overflow: hidden;
-  }
-  .rounded {
-    border-radius: 0.25rem;
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
@@ -544,11 +697,14 @@
   .text-\[5\.2rem\] {
     font-size: 5.2rem;
   }
-  .text-\[36px\] {
-    font-size: 36px;
+  .text-\[25px\] {
+    font-size: 25px;
   }
-  .text-\[40px\] {
-    font-size: 40px;
+  .text-\[38px\] {
+    font-size: 38px;
+  }
+  .text-\[100px\] {
+    font-size: 100px;
   }
   .leading-\[1\.2\] {
     --tw-leading: 1.2;
@@ -604,6 +760,9 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .outline-red-600 {
+    outline-color: var(--color-red-600);
   }
   .blur {
     --tw-blur: blur(8px);
@@ -761,6 +920,21 @@ body {
   font-family: 'Inter';
   font-style: italic;
   src: url(../fonts/Inter/Inter-Italic-VariableFont_wght.ttf) format('woff2');
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
