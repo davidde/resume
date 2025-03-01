@@ -163,6 +163,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .absolute {
     position: absolute;
   }
@@ -271,8 +274,14 @@
   .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-margin-left\)\)\] {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-margin-left));
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -282,6 +291,15 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
+  }
+  .table {
+    display: table;
   }
   .h-\[1\.7em\] {
     height: 1.7em;
@@ -357,6 +375,9 @@
   }
   .flex-\[0_0_14rem\] {
     flex: 0 0 14rem;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -495,8 +516,20 @@
   .text-\[2\.2rem\] {
     font-size: 2.2rem;
   }
+  .text-\[4\.5rem\] {
+    font-size: 4.5rem;
+  }
+  .text-\[5\.2rem\] {
+    font-size: 5.2rem;
+  }
+  .text-\[5\.3rem\] {
+    font-size: 5.3rem;
+  }
   .text-\[5\.5rem\] {
     font-size: 5.5rem;
+  }
+  .text-\[5rem\] {
+    font-size: 5rem;
   }
   .leading-\[1\.3em\] {
     --tw-leading: 1.3em;
@@ -549,6 +582,13 @@
   }
   .italic {
     font-style: italic;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .clipcirc-radius-\[45\%\] {
     --clip-circ-radius: 45%;
@@ -731,4 +771,9 @@ body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
