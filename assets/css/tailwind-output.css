@@ -163,6 +163,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .absolute {
     position: absolute;
   }
@@ -235,6 +238,12 @@
   .mt-\[2rem\] {
     margin-top: 2rem;
   }
+  .mt-\[3\.5rem\] {
+    margin-top: 3.5rem;
+  }
+  .mt-\[3\.8rem\] {
+    margin-top: 3.8rem;
+  }
   .mt-\[4rem\] {
     margin-top: 4rem;
   }
@@ -262,8 +271,14 @@
   .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-margin-left\)\)\] {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-margin-left));
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -273,6 +288,15 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
+  }
+  .table {
+    display: table;
   }
   .h-\[0\.45em\] {
     height: 0.45em;
@@ -346,6 +370,9 @@
   .flex-\[0_0_13rem\] {
     flex: 0 0 13rem;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -379,8 +406,17 @@
   .gap-\[0\.7em\] {
     gap: 0.7em;
   }
+  .gap-\[0\.8rem\] {
+    gap: 0.8rem;
+  }
+  .gap-\[1\.1rem\] {
+    gap: 1.1rem;
+  }
   .gap-\[1\.2rem\] {
     gap: 1.2rem;
+  }
+  .gap-\[1rem\] {
+    gap: 1rem;
   }
   .gap-\[5rem\] {
     gap: 5rem;
@@ -551,8 +587,22 @@
   .italic {
     font-style: italic;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .blur {
+    --tw-blur: blur(8px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .blur-\[3px\] {
     --tw-blur: blur(3px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .clipcirc-radius-\[45\%\] {
@@ -734,6 +784,11 @@ body {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
