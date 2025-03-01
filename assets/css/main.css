@@ -62,7 +62,7 @@ body {
   font-size: 1.5rem;
 }
 
-* { outline: 1px solid red; opacity: 1 !important; visibility: visible !important; }
+/* * { outline: 1px solid red; opacity: 1 !important; visibility: visible !important; } */
 
 
 /**************************
