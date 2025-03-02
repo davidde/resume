@@ -208,17 +208,14 @@
   .mx-\[auto\] {
     margin-inline: auto;
   }
+  .my-\[0\.1rem\] {
+    margin-block: 0.1rem;
+  }
   .my-\[0\.1rem_0\.5rem\] {
     margin-block: 0.1rem 0.5rem;
   }
-  .my-\[0\.5rem\] {
-    margin-block: 0.5rem;
-  }
-  .my-\[0\.5rem_0\.3rem\] {
-    margin-block: 0.5rem 0.3rem;
-  }
-  .my-\[0\.25rem_0\.5rem\] {
-    margin-block: 0.25rem 0.5rem;
+  .my-\[0rem\] {
+    margin-block: 0rem;
   }
   .my-\[1\.8rem_2\.4rem\] {
     margin-block: 1.8rem 2.4rem;
@@ -241,17 +238,11 @@
   .mt-\[3\.8rem\] {
     margin-top: 3.8rem;
   }
-  .mt-\[4rem\] {
-    margin-top: 4rem;
-  }
   .mt-\[var\(--sidebar-margin-top\)\] {
     margin-top: var(--sidebar-margin-top);
   }
   .mb-\[3rem\] {
     margin-bottom: 3rem;
-  }
-  .ml-\[0\.5rem\] {
-    margin-left: 0.5rem;
   }
   .ml-\[1\.2em\] {
     margin-left: 1.2em;
@@ -277,6 +268,9 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .inline-flex {
     display: inline-flex;
   }
@@ -286,14 +280,8 @@
   .table {
     display: table;
   }
-  .h-\[0\.4em\] {
-    height: 0.4em;
-  }
   .h-\[0\.5em\] {
     height: 0.5em;
-  }
-  .h-\[0\.33em\] {
-    height: 0.33em;
   }
   .h-\[1\.7em\] {
     height: 1.7em;
@@ -388,6 +376,9 @@
   .gap-\[0\.3em\] {
     gap: 0.3em;
   }
+  .gap-\[0\.3rem\] {
+    gap: 0.3rem;
+  }
   .gap-\[0\.4rem\] {
     gap: 0.4rem;
   }
@@ -397,23 +388,26 @@
   .gap-\[0\.6em\] {
     gap: 0.6em;
   }
-  .gap-\[0\.6rem\] {
-    gap: 0.6rem;
-  }
   .gap-\[0\.7em\] {
     gap: 0.7em;
   }
-  .gap-\[0\.7rem\] {
-    gap: 0.7rem;
+  .gap-\[0\.8rem\] {
+    gap: 0.8rem;
   }
   .gap-\[1rem\] {
     gap: 1rem;
+  }
+  .gap-\[2em\] {
+    gap: 2em;
   }
   .gap-\[5rem\] {
     gap: 5rem;
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .rounded {
+    border-radius: 0.25rem;
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
@@ -513,22 +507,19 @@
   .text-\[2\.2rem\] {
     font-size: 2.2rem;
   }
-  .text-\[2\.4em\] {
-    font-size: 2.4em;
-  }
   .text-\[2em\] {
     font-size: 2em;
   }
   .text-\[5\.2rem\] {
     font-size: 5.2rem;
   }
-  .leading-\[1\.2\] {
-    --tw-leading: 1.2;
-    line-height: 1.2;
+  .leading-\[1\.2em\] {
+    --tw-leading: 1.2em;
+    line-height: 1.2em;
   }
-  .leading-\[1\.3\] {
-    --tw-leading: 1.3;
-    line-height: 1.3;
+  .leading-\[1\.3em\] {
+    --tw-leading: 1.3em;
+    line-height: 1.3em;
   }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
@@ -651,6 +642,18 @@ header {
 aside {
   --text-color: var(--main-bg);
   --bg-color: var(--sidebar-bg);
+  .list {
+    .list-item {
+      gap: 0.5em;
+    }
+  }
+  #soft-skills, #tech-skills {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.2em;
+      }
+    }
+  }
 }
 main {
   --text-color: var(--sidebar-bg);
@@ -684,6 +687,8 @@ main {
         position: relative;
         height: var(--bullet-diameter);
         width: var(--bullet-diameter);
+        min-height: var(--bullet-diameter);
+        min-width: var(--bullet-diameter);
         background-color: var(--text-color);
         border-radius: 50%;
         z-index: 10;
@@ -693,6 +698,8 @@ main {
           left: calc((1 - var(--hollow-bullet-diameter)) * var(--bullet-diameter));
           height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
           width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          min-height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          min-width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
           background-color: var(--bg-color);
           border-radius: 50%;
           z-index: 15;

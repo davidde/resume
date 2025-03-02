@@ -74,6 +74,20 @@ header {
 aside {
   --text-color: var(--main-bg);
   --bg-color: var(--sidebar-bg);
+
+  .list {
+    .list-item {
+      /* Space between bullet and text: */
+      gap: 0.5em;
+    }
+  }
+  #soft-skills, #tech-skills {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.2em;
+      }
+    }
+  }
 }
 
 main {
@@ -81,6 +95,8 @@ main {
   --bg-color: var(--main-bg);
 }
 
+/* Implementation of <div> as <ul> list with
+   vertical connecting lines between bullets: */
 .list {
   position: relative;
   display: flex;
@@ -114,8 +130,8 @@ main {
         position: relative;
         height: var(--bullet-diameter);
         width: var(--bullet-diameter);
-        /* min-height: var(--bullet-diameter);
-        min-width: var(--bullet-diameter); */
+        min-height: var(--bullet-diameter);
+        min-width: var(--bullet-diameter);
         background-color: var(--text-color);
         border-radius: 50%;
         z-index: 10;
@@ -125,8 +141,8 @@ main {
           left: calc((1 - var(--hollow-bullet-diameter)) * var(--bullet-diameter));
           height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
           width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
-          /* min-height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
-          min-width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%); */
+          min-height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          min-width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
           background-color: var(--bg-color);
           border-radius: 50%;
           z-index: 15;
