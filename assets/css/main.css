@@ -81,7 +81,21 @@ aside {
       gap: 0.5em;
     }
   }
-  #soft-skills, #tech-skills {
+  #about-me {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.05em;
+      }
+    }
+  }
+  #soft-skills {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.15em;
+      }
+    }
+  }
+  #tech-skills {
     .list-item {
       .list-bullet-container {
         margin-top: 0.2em;

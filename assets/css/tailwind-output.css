@@ -163,9 +163,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
   .absolute {
     position: absolute;
   }
@@ -211,9 +208,6 @@
   .my-\[0\.1rem\] {
     margin-block: 0.1rem;
   }
-  .my-\[0\.1rem_0\.5rem\] {
-    margin-block: 0.1rem 0.5rem;
-  }
   .my-\[0rem\] {
     margin-block: 0rem;
   }
@@ -228,9 +222,6 @@
   }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
-  }
-  .mt-\[0\.1rem\] {
-    margin-top: 0.1rem;
   }
   .mt-\[2\.2rem\] {
     margin-top: 2.2rem;
@@ -256,14 +247,8 @@
   .ml-\[calc\(var\(--sidebar-width\)\+var\(--sidebar-margin-left\)\)\] {
     margin-left: calc(var(--sidebar-width) + var(--sidebar-margin-left));
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
-  }
-  .grid {
-    display: grid;
   }
   .hidden {
     display: none;
@@ -271,14 +256,8 @@
   .inline {
     display: inline;
   }
-  .inline-flex {
-    display: inline-flex;
-  }
   .list-item {
     display: list-item;
-  }
-  .table {
-    display: table;
   }
   .h-\[0\.5em\] {
     height: 0.5em;
@@ -348,9 +327,6 @@
   }
   .min-w-\[13rem\] {
     min-width: 13rem;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -561,17 +537,6 @@
   .italic {
     font-style: italic;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .blur {
-    --tw-blur: blur(8px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .blur-\[1px\] {
     --tw-blur: blur(1px);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -582,9 +547,6 @@
   }
   .blur-\[3px\] {
     --tw-blur: blur(3px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .clipcirc-radius-\[45\%\] {
@@ -647,7 +609,21 @@ aside {
       gap: 0.5em;
     }
   }
-  #soft-skills, #tech-skills {
+  #about-me {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.05em;
+      }
+    }
+  }
+  #soft-skills {
+    .list-item {
+      .list-bullet-container {
+        margin-top: 0.15em;
+      }
+    }
+  }
+  #tech-skills {
     .list-item {
       .list-bullet-container {
         margin-top: 0.2em;
@@ -841,11 +817,6 @@ main {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
