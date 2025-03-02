@@ -48,6 +48,11 @@
   --sidebar-heading-height: 2.6em;
   --main-heading-height: 2.7em;
 
+  --bullet-diameter: 0.65em;
+  /* Hollow bullet diameter relative to `--bullet-diameter`: */
+  --hollow-bullet-diameter: 0.875;
+  --line-height: 1.3;
+
   font-family: 'Poppins';
   font-size: 10px;
 }
@@ -62,48 +67,62 @@ body {
   font-size: 1.5rem;
 }
 
-.list-disc, .list-circle {
+.list {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* align-content: center; */
-  gap: 0.5rem;
-  /* Remove default bullets: */
-  list-style: none;
-  padding-left: 0;
-  margin-left: 1.5rem;
+  line-height: 1em;
   .list-line {
     position: absolute;
-    height: calc(100% - 1.5em);
-    border-left: calc(1/16 * 1em) solid #b2afaf;
-    top: 0.8em;
-    left: 0.45em;
+    border-left: calc(1/16 * 1em) solid var(--accent-color);
+    top: 0.5em;
+    bottom: 0.5em;
+    left: calc(0.5em - 1/32 * 1em);
   }
-  li {
+  .list-item {
+    position: relative;
     display: flex;
-    flex-direction: row;
     /* align-items: center; */
-    &::before {
-      /* Adjust bullet size: */
-      font-size: 2.5em;
-      /* Space between bullet and text: */
-      margin-right: 0.25em;
-      /* Compensate larger bullet font-size: */
-      line-height: 0.4;
-      /* Make bullet appear on top of line: */
-      z-index: 10;
+    /* Space between bullet and text: */
+    gap: 0.8em;
+
+    .list-bullet-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1em;
+      width: 1em;
+
+      .list-bullet {
+        position: relative;
+        
+        /* top: calc(0.5em - var(--bullet-diameter) / 2); */
+        /* top: 0.5em; */
+        height: var(--bullet-diameter);
+        width: var(--bullet-diameter);
+        /* Use `min-height/width` so it doesn't
+          distort on smaller viewports: */
+        min-height: var(--bullet-diameter);
+        min-width: var(--bullet-diameter);
+        background-color: var(--sidebar-bg);
+        border-radius: 50%;
+        z-index: 10;
+        .list-bullet-hollow {
+          position: relative;
+          top: calc((1 - var(--hollow-bullet-diameter)) * var(--bullet-diameter));
+          left: calc((1 - var(--hollow-bullet-diameter)) * var(--bullet-diameter));
+          height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          min-height: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          min-width: calc(100% - 2 * (1 - var(--hollow-bullet-diameter)) * 100%);
+          background-color: var(--main-bg);
+          border-radius: 50%;
+          z-index: 15;
+        }
+      }
     }
   }
 }
-.list-disc li::before {
-  content: "•"; /* Unicode character for black bullet */
-}
-.list-circle li::before {
-  content: "◦"; /* Unicode character for hollow bullet */
-}
-
 
 /* * { outline: 1px solid red; opacity: 1 !important; visibility: visible !important; } */
 
