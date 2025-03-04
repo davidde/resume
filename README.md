@@ -5,7 +5,7 @@
 
 ## Project Goal
 * Recreate my [canva](https://www.canva.com) resume in pure HTML + CSS.
-* Optimize the code for a clean single page "Print to PDF" export.
+* Optimize the code for a clean single page "Print to PDF" browser export.
 
 &nbsp;
 > [!IMPORTANT]
@@ -50,3 +50,6 @@ The web components are created by the `fragment-template.js` file, using the fol
 These web components are then called like e.g. `<fragment-template fragment='sidebar'>` in the `dutch/index.html` and `english/index.html` files.
 
 Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
+
+## Data import
+The `fragment-template.js` web components import the relevant data from the `data-resume.js` file using the `data-resume` attributes that are present in the template files. The `data-resume.js` file contains both the English and Dutch data for the resume; if no Dutch data value is present, it will default to the English value.
