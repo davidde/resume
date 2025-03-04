@@ -1,3 +1,6 @@
+import data from '../../data-resume.js';
+
+
 // Store the shared CSS so it's only fetched once:
 let sharedStylesheet = null;
 
@@ -24,6 +27,7 @@ class FragmentTemplate extends HTMLElement {
 
   connectedCallback() {
     const fragment = this.getAttribute('fragment');
+    const lang = document.documentElement.lang == 'en' ? 0 : 1;
 
     fetch(`../assets/html/${fragment}-template.html`)
       .then(response => response.text())
@@ -31,6 +35,17 @@ class FragmentTemplate extends HTMLElement {
         const template = document.createElement('template');
         template.innerHTML = html;
         const clone = template.content.cloneNode(true);
+        clone.querySelectorAll('[data-resume]').forEach(
+          element => {
+            const keys = element.getAttribute('data-resume');
+            let value = data;
+            // Recursively find the leaf value "array":
+            keys.split(".").forEach(key => value = value[key]);
+            // Default to English value if Dutch one doesn't exist:
+            value = value[lang] ? value[lang] : value[0];
+            element.innerHTML = value;
+          }
+        );
         this.shadowRoot.appendChild(clone);
       })
       .catch(error => console.error('Error loading template:', error));
