@@ -86,7 +86,7 @@
           </div>
           <!-- List Content: -->
           <div>
-            <b>Belg</b>, ° 19 december 1986
+            <b data-resume='about.nationality'>Belg</b>, <span data-resume='about.birthdate'>° 19 december 1986</span>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -96,7 +96,7 @@
           </div>
           <!-- List Content: -->
           <div class='flex gap-[2em]'>
-            <b>Talen:</b>
+            <b data-resume='about.languages.0'>Talen:</b>
             <!-- <div> that functions as <ul> list: -->
             <div class='flex flex-col gap-[0.4rem] my-[0rem] text-[0.9em]'>
               <!-- List Item <div>: -->
@@ -106,7 +106,7 @@
                   ◦
                 </span>
                 <!-- List Content: -->
-                <p>
+                <p data-resume='about.languages.1'>
                   Nederlands: moedertaal
                 </p>
               </div>
@@ -117,7 +117,7 @@
                   ◦
                 </span>
                 <!-- List Content: -->
-                <p>
+                <p data-resume='about.languages.2'>
                   Engels: zeer goed <br>
                   (mondeling/schriftelijk)
                 </p>
@@ -129,7 +129,7 @@
                   ◦
                 </span>
                 <!-- List Content: -->
-                <p>
+                <p data-resume='about.languages.3'>
                   Frans: basiskennis
                 </p>
               </div>
@@ -143,7 +143,7 @@
           </div>
           <!-- List Content: -->
           <div>
-            <b>Rijbewijs B</b>, eigen wagen
+            <b data-resume='about.driving.license'>Rijbewijs B</b>, <span data-resume='about.driving.car'>eigen wagen</span>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
             <div class='list-bullet'></div>
           </div>
           <!-- List Content: -->
-          <div class='leading-[1.2em]'>
+          <div data-resume='softskills.1' class='leading-[1.2em]'>
             Creatieve probleemoplosser
           </div>
         </div>
@@ -178,8 +178,8 @@
             <div class='list-bullet'></div>
           </div>
           <!-- List Content: -->
-          <div class='leading-[1.2em]'>
-            Oog voor detail en leergierig
+          <div data-resume='softskills.2' class='leading-[1.2em]'>
+            Constructief, werkt graag in team
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -188,8 +188,8 @@
             <div class='list-bullet'></div>
           </div>
           <!-- List Content: -->
-          <div class='leading-[1.2em]'>
-            Constructief, werkt graag in team
+          <div data-resume='softskills.3' class='leading-[1.2em]'>
+            Oog voor detail en leergierig
           </div>
         </div>
       </div>
@@ -216,7 +216,12 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>.NET development:</b> C#, WPF, ADO.NET, Entity Framework, Unity Engine, etc.
+            <b data-resume='techskills.1.general'>
+              .NET development
+            </b>: 
+            <span data-resume='techskills.1.specific'>
+              C#, WPF, ADO.NET, Entity Framework, Unity Engine, etc.
+            </span>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -226,7 +231,12 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>Frontend development:</b> Javascript, Typescript, React, Nextjs, TailwindCSS, sass, NPM
+            <b data-resume='techskills.2.general'>
+              Frontend development
+            </b>: 
+            <span data-resume='techskills.2.specific'>
+              Javascript, Typescript, React, Nextjs, TailwindCSS, sass, NPM
+            </span>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -236,7 +246,12 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>Database management:</b> SQL Server, PostgreSQL, MySQL
+            <b data-resume='techskills.3.general'>
+              Database management
+            </b>: 
+            <span data-resume='techskills.3.specific'>
+              SQL Server, PostgreSQL, MySQL
+            </span>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -246,7 +261,12 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>Linux & scripting:</b> Python, BASH, zshell, Powershell
+            <b data-resume='techskills.4.general'>
+              Linux & scripting
+            </b>: 
+            <span data-resume='techskills.4.specific'>
+              Python, BASH, zshell, Powershell
+            </span>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -256,7 +276,9 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>Agile methodologies & Scrum</b>
+            <b data-resume='techskills.5.general'>
+              Agile methodologies & Scrum
+            </b>
           </div>
         </div>
         <!-- List Item <div>: -->
@@ -266,8 +288,10 @@
           </div>
           <!-- List Content: -->
           <div class='leading-[1.3em]'>
-            <b>Design:</b> Adobe Photoshop &
-Illustrator, Krita, Inkscape, Solidworks
+            <b data-resume='techskills.6.general'>Design</b>: 
+            <span data-resume='techskills.6.specific'>
+              Adobe Photoshop & Illustrator, Krita, Inkscape, Solidworks
+            </span>
           </div>
         </div>
       </div>

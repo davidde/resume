@@ -52,7 +52,6 @@
   /* Hollow bullet diameter relative to `--bullet-diameter`: */
   --hollow-bullet-diameter: 0.875;
 
-  font-family: 'Poppins';
   font-size: 10px;
 }
 
@@ -64,6 +63,7 @@ body {
   display: grid;
   grid-template-rows: min-content min-content;
   font-size: 1.5rem;
+  font-family: 'Poppins';
 }
 
 header {

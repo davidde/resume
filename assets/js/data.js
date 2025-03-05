@@ -21,8 +21,52 @@ const data =
       "location": [ "Ghent", "Gent" ],
       "linkedin": [ "<a href='https://www.linkedin.com/in/david-deprost'>linkedin.com/in/david-deprost</a>" ],
       "github": [ "<a href='https://github.com/davidde'>github.com/davidde</a>" ]
+    },
+    "about": {
+      "nationality": [ "Belgian", "Belg" ],
+      "birthdate": [ "° December 19, 1986", "° 19 december 1986" ],
+      "languages": {
+        "0": [ "Languages:", "Talen:"],
+        "1": [ "Dutch: mother tongue", "Nederlands: moedertaal"],
+        "2": [ "English: excellent <br> (oral & written)", "Engels: zeer goed <br> (mondeling/schriftelijk)" ],
+        "3": [ "French: basic knowledge", "Frans: basiskennis" ],
+      },
+      "driving": {
+        "license": [ "Driving License B", "Rijbewijs B" ],
+        "car": [ "car available", "eigen wagen" ],
+      },
+    },
+    "softskills": {
+        "1": [ "Creative problem solver", "Creatieve probleemoplosser"],
+        "2": [ "Optimistic team player", "Optimistische teamspeler" ],
+        "3": [ "Eye for detail", "Oog voor detail" ],
+    },
+    "techskills": {
+      "1": {
+        "general": [ ".NET development" ],
+        "specific": [ "C#, WPF, ADO.NET, Entity Framework, Unity Engine, etc." ]
+      },
+      "2": {
+        "general": [ "Frontend development" ],
+        "specific": [ "Javascript, Typescript, React, Nextjs, TailwindCSS, sass, NPM" ]
+      },
+      "3": {
+        "general": [ "Database management" ],
+        "specific": [ "SQL Server, PostgreSQL, MySQL" ]
+      },
+      "4": {
+        "general": [ "Linux & scripting" ],
+        "specific": [ "Python, BASH, zshell, Powershell" ]
+      },
+      "5": {
+        "general": [ "Agile methodologies & Scrum" ],
+        "specific": [ ]
+      },
+      "6": {
+        "general": [ "Design" ],
+        "specific": [ "Adobe Photoshop & Illustrator, Krita, Inkscape, Solidworks" ]
+      },
     }
-
   },
   "main": {
 
