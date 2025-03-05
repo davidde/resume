@@ -10,8 +10,9 @@ function loadTemplate(template) {
     .then(response => response.text())
     .then(html => {
       const target = document.getElementsByTagName(targetElement)[0];
-      target.innerHTML = html;
-      target.querySelectorAll('[data-resume]').forEach(
+      const clone = target.cloneNode(true);
+      clone.innerHTML = html;
+      clone.querySelectorAll('[data-resume]').forEach(
         element => {
           const keys = element.getAttribute('data-resume');
           let value = data[template];
@@ -23,6 +24,7 @@ function loadTemplate(template) {
           if (value) element.innerHTML = value;
         }
       );
+      target.innerHTML = clone.innerHTML;
       if (template === 'sidebar') inlineSvgIcons();
     })
     .catch(error => console.error('Error loading template:', error));
