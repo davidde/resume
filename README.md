@@ -3,14 +3,15 @@
 > This entire endeavour has been slightly more complicated than I had anticipated.  
 > At least now I know why people generally don't write their resumes in HTML + CSS... 😬
 
-## Project Goal
-* Recreate my [canva](https://www.canva.com) resume in pure HTML + CSS.
+## Project Goals
+* Recreate my [canva](https://www.canva.com) resume as a webpage.
 * Optimize the code for a clean single page "Print to PDF" browser export.
+* Import everything efficiently from a `.json`/`.js` data file that can be easily modified.
 
 &nbsp;
 > [!IMPORTANT]
 > * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meaning no javascript or node.js is involved. We're currently working on **Windows 11**.
-> * Because the HTML gets large really fast (especially with inlined svg's), we're opting to split it into several web component templates, which can then be filled with data from a `.json` file.
+> * Because the HTML gets large really fast (especially with inlined svg's), we're opting to split it into several web component templates, which can then be filled with data from the `.json`/`.js` file.
 &nbsp;
 
 ## Installing TailwindCSS
@@ -52,4 +53,6 @@ These web components are then called like e.g. `<fragment-template fragment='sid
 Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
 
 ## Data import
-The `fragment-template.js` web components import the relevant data from the `data-resume.js` file using the `data-resume` attributes that are present in the template files. The `data-resume.js` file contains both the English and Dutch data for the resume; if no Dutch data value is present, it will default to the English value.
+The `fragment-template.js` web components import the relevant data from the `data.js` file using the `data-resume` attributes that are present in the template files.
+
+The `data.js` file contains both the English and Dutch data for the resume; if no Dutch value is present, it will default to the English value. The `data.js` values will overwrite the data that is present in the HTML templates. If no value is provided in `data.js`, nothing will be overwritten, and whatever is already present in the HTML templates will simply be kept.

@@ -1,4 +1,4 @@
-import data from '../../data-resume.js';
+import data from './data.js';
 
 
 // Store the shared CSS so it's only fetched once:
@@ -38,12 +38,13 @@ class FragmentTemplate extends HTMLElement {
         clone.querySelectorAll('[data-resume]').forEach(
           element => {
             const keys = element.getAttribute('data-resume');
-            let value = data;
-            // Recursively find the leaf value "array":
+            let value = data[fragment];
+            // Recursively find the "leaf value" ARRAY:
             keys.split(".").forEach(key => value = value[key]);
             // Default to English value if Dutch one doesn't exist:
             value = value[lang] ? value[lang] : value[0];
-            element.innerHTML = value;
+            // Only update the HTML if the data actually contains a value:
+            if (value) element.innerHTML = value;
           }
         );
         this.shadowRoot.appendChild(clone);
