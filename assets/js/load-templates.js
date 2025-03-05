@@ -23,8 +23,26 @@ function loadTemplate(template) {
           if (value) element.innerHTML = value;
         }
       );
+      if (template === 'sidebar') inlineSvgIcons();
     })
     .catch(error => console.error('Error loading template:', error));
+}
+
+function inlineSvgIcons() {
+  document.querySelectorAll("[data-svg]")
+    .forEach(icon => {
+      const url = icon.getAttribute("data-svg");
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            console.error(`SVG URL '${url}' Not Found`);
+            return null;
+          }
+          return response.text()
+        })
+        .then(html => icon.innerHTML = html)
+        .catch(err => console.error(`Error loading SVG: ${url}`, err));
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

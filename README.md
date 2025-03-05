@@ -48,7 +48,7 @@ The templates are loaded by the `load-templates.js` file, using the following te
 * `main-template.html`
 * `sidebar-template.html`
 
-They are loaded by an `EventListener` on `DOMContentLoaded`, directly in the `<header>`, `<aside>` and `<main>` tags in the `dutch/index.html` and `english/index.html` files.
+They are loaded directly in the `<header>`, `<aside>` and `<main>` tags in the `dutch/index.html` and `english/index.html` files by an `EventListener` on `DOMContentLoaded`.
 
 Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
 
@@ -56,3 +56,6 @@ Note that this will not work when just opening the files in the browser; a serve
 The `load-templates.js` file also imports the relevant data from the `data.js` file using the `data-resume` attributes that are present in the template files.
 
 The `data.js` file contains both the English and Dutch data for the resume; if no Dutch value is present, it will default to the English value. The `data.js` values will overwrite the data that is present in the HTML templates. If no value is provided in `data.js`, nothing will be overwritten, and whatever is already present in the HTML templates will simply be kept.
+
+## SVG inlining
+The `load-templates.js` script also inlines the `svg`'s from the `assets/images` folder directly into the HTML, so they can be styled with CSS. The required TailwindCSS classes for styling are directly added into the svg images themselves.
