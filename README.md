@@ -6,12 +6,12 @@
 ## Project Goals
 * Recreate my [canva](https://www.canva.com) resume as a webpage.
 * Optimize the code for a clean single page "Print to PDF" browser export.
-* Import everything efficiently from a `.json`/`.js` data file that can be easily modified.
+* Import everything efficiently from a data store that can be easily modified.
 
 &nbsp;
 > [!IMPORTANT]
 > * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meaning no javascript or node.js is involved. We're currently working on **Windows 11**.
-> * Because the HTML gets large really fast (especially with inlined svg's), we're opting to split it into several web component templates, which can then be filled with data from the `.json`/`.js` file.
+> * Because the HTML gets large really fast (especially with inlined svg's), we're splitting them into several "template" files and using Javascript to inject them into the page. This approach also allows filling them with data from the `data.js` file.
 &nbsp;
 
 ## Installing TailwindCSS
@@ -42,17 +42,17 @@
   ```
   Note that if the input and output CSS files are not in the same folder, the `src` paths (e.g. for images and fonts) in the CSS file will not be updated by Tailwind, so you'll need to manually update them.
 
-## Web component set-up
-The web components are created by the `fragment-template.js` file, using the following templates:
+## Template injection
+The templates are loaded by the `load-templates.js` file, using the following templates:
 * `header-template.html`
 * `main-template.html`
 * `sidebar-template.html`
 
-These web components are then called like e.g. `<fragment-template fragment='sidebar'>` in the `dutch/index.html` and `english/index.html` files.
+They are loaded by an `EventListener` on `DOMContentLoaded`, directly in the `<header>`, `<aside>` and `<main>` tags in the `dutch/index.html` and `english/index.html` files.
 
 Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
 
 ## Data import
-The `fragment-template.js` web components import the relevant data from the `data.js` file using the `data-resume` attributes that are present in the template files.
+The `load-templates.js` file also imports the relevant data from the `data.js` file using the `data-resume` attributes that are present in the template files.
 
 The `data.js` file contains both the English and Dutch data for the resume; if no Dutch value is present, it will default to the English value. The `data.js` values will overwrite the data that is present in the HTML templates. If no value is provided in `data.js`, nothing will be overwritten, and whatever is already present in the HTML templates will simply be kept.
