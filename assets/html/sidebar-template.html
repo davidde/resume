@@ -3,7 +3,9 @@
   <!-- Black circle surrounding avatar: -->
   <div class='absolute top-0 z-10 h-(--sidebar-width) w-(--sidebar-width) rounded-[50%] bg-(--bg-color) shadow-[1rem_-0.5rem_1rem_0rem_#888888]'>
     <!-- Avatar: -->
-    <image src='../assets/images/avatar-david.png' class='w-[calc(0.75*var(--sidebar-width))] clipcirc-radius-[45%] clipcirc-x-[52%] clipcirc-y-[50%] my-[1rem] mx-[auto]'>
+    <div class='filter-[drop-shadow(0_0_1rem_white)]'>
+      <image src='../assets/images/avatar-david.png' class='w-[calc(0.75*var(--sidebar-width))] clipcirc-radius-[40%] clipcirc-x-[52%] clipcirc-y-[50%] my-[1rem] mx-[auto]'></image>
+    </div>
     <!-- Mask the black circle's shadow inside the sidebar': -->
     <div class='absolute top-[calc(var(--sidebar-width)/2)] h-(--sidebar-width) w-(--sidebar-width) bg-(--bg-color) -z-10'></div>
   </div>

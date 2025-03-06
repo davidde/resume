@@ -722,6 +722,10 @@
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-\[0_0_1rem_0rem_\#ffffff\] {
+    --tw-shadow: 0 0 1rem 0rem var(--tw-shadow-color, #ffffff);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-\[1rem_-0\.5rem_1rem_0rem_\#777777\] {
     --tw-shadow: 1rem -0.5rem 1rem 0rem var(--tw-shadow-color, #777777);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -754,8 +758,49 @@
     --tw-blur: blur(3px);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .drop-shadow {
+    --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow( 0 1px 1px rgb(0 0 0 / 0.06));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .filter-\[drop-shadow\(0_0_1rem_-1rem_white\)\] {
+    filter: drop-shadow(0 0 1rem -1rem white);
+  }
+  .filter-\[drop-shadow\(0_0_1rem_0_white\)\] {
+    filter: drop-shadow(0 0 1rem 0 white);
+  }
+  .filter-\[drop-shadow\(0_0_1rem_1rem_white\)\] {
+    filter: drop-shadow(0 0 1rem 1rem white);
+  }
+  .filter-\[drop-shadow\(0_0_1rem_rgba\(50\,_50\,_0\,_0\.5\)\)\] {
+    filter: drop-shadow(0 0 1rem rgba(50, 50, 0, 0.5));
+  }
+  .filter-\[drop-shadow\(0_0_1rem_white\)\] {
+    filter: drop-shadow(0 0 1rem white);
+  }
+  .filter-\[drop-shadow\(0_0_2rem_0\.5rem_white\)\] {
+    filter: drop-shadow(0 0 2rem 0.5rem white);
+  }
+  .filter-\[drop-shadow\(0_0_2rem_2rem_white\)\] {
+    filter: drop-shadow(0 0 2rem 2rem white);
+  }
+  .filter-\[drop-shadow\(0_0_2rem_white\)\] {
+    filter: drop-shadow(0 0 2rem white);
+  }
+  .filter-\[drop-shadow\(1rem_1rem_2rem_0\.5rem_white\)\] {
+    filter: drop-shadow(1rem 1rem 2rem 0.5rem white);
+  }
+  .filter-\[drop-shadow\(1rem_1rem_2rem_0_white\)\] {
+    filter: drop-shadow(1rem 1rem 2rem 0 white);
+  }
+  .filter-\[drop-shadow\(1rem_1rem_2rem_white\)\] {
+    filter: drop-shadow(1rem 1rem 2rem white);
+  }
+  .clipcirc-radius-\[40\%\] {
+    --clip-circ-radius: 40%;
+    clip-path: circle(var(--clip-circ-radius) at var(--clip-circ-x) var(--clip-circ-y));
   }
   .clipcirc-radius-\[45\%\] {
     --clip-circ-radius: 45%;
