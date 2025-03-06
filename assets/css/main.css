@@ -35,8 +35,8 @@
 }
 
 :root {
-  --accent-color: #b2afaf;
-  --header-bg: #d9d9d9;
+  --accent-color: #d9d9d9;
+  --header-bg: #b2afaf;
   --sidebar-bg: black;
   --main-bg: white;
 
@@ -72,7 +72,7 @@ header {
 }
 
 aside {
-  --text-color: var(--main-bg);
+  --text-color: var(--accent-color);
   --bg-color: var(--sidebar-bg);
 
   .list {
@@ -118,7 +118,7 @@ main {
   line-height: 1em;
   .list-line {
     position: absolute;
-    border-left: 1px solid var(--accent-color);
+    border-left: 1px solid var(--header-bg);
     top: 0.5em;
     bottom: 0.2em;
     left: calc(0.5em - 1/32 * 1em);
