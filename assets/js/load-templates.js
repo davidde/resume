@@ -21,7 +21,6 @@ function loadTemplate(template) {
           value = value[lang] ? value[lang] : value[0];
           // Only update the HTML if the data actually contains a value:
           if (value) {
-            element.replaceChildren();
             element.insertAdjacentHTML('beforeend', value);
           }
         }

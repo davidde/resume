@@ -2,8 +2,7 @@
 // - Index 0: English value
 // - Index 1: Dutch value
 // If no Dutch value is provided, it will default to the English value.
-// If no values is provided at all, it will simply keep whatever the
-// HTML template already contains.
+// The value array can also be left entirely empty, and nothing will be added.
 const data =
 {
   "header": {
@@ -16,7 +15,14 @@ const data =
   },
   "sidebar": {
     "contact": {
-      "phone": [],
+      "phone": [
+        // (Fake phone number:)
+        "\
+          <span class='blur-[1px]'>+32 (0)4 </span>\
+          <span class='blur-[2px]'>34 86 </span>\
+          <span class='blur-[3px]'>15 72</span>\
+        "
+      ],
       "email": [ "dadeprost@gmail.com" ],
       "location": [ "Ghent", "Gent" ],
       "linkedin": [ "<a href='https://www.linkedin.com/in/david-deprost'>linkedin.com/in/david-deprost</a>" ],
@@ -33,7 +39,7 @@ const data =
       },
       "driving": {
         "license": [ "Driving License B", "Rijbewijs B" ],
-        "car": [ "car available", "eigen wagen" ],
+        "car": [ "own car", "eigen wagen" ],
       },
     },
     "softskills": {
@@ -91,7 +97,7 @@ const data =
           ".NET developer met C#"
         ],
         "institution": [
-          "VDAB, certificate obtained",
+          "VDAB, obtained certificate",
           "VDAB, certificaat behaald"
         ],
       },
@@ -133,8 +139,8 @@ const data =
       "3": {
         "year": [ "2020 - 2021" ],
         "occupation": [
-          "Volunteer work Tanzania",
-          "Vrijwilligerswerk Tanzania"
+          "Volunteer work in Tanzania",
+          "Vrijwilligerswerk in Tanzania"
         ],
         "employer": [ "Golden Dream Safaris" ],
         "extra": {

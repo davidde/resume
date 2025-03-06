@@ -55,7 +55,7 @@ Note that this will not work when just opening the files in the browser; a serve
 ## Data import
 The `load-templates.js` file also imports the relevant data from the `data.js` file using the `data-resume` attributes that are present in the template files.
 
-The `data.js` file contains both the English and Dutch data for the resume; if no Dutch value is present, it will default to the English value. The `data.js` values will overwrite the data that is present in the HTML templates. If no value is provided in `data.js`, nothing will be overwritten, and whatever is already present in the HTML templates will simply be kept.
+All **values** in the `data.js` file are arrays; index 0 contains the English value, while index 1 contains the Dutch value. If no Dutch value is present, the page will default to the English value. If the value array in `data.js` is empty, nothing will be added to the resume.
 
 ## SVG inlining
 The `load-templates.js` script also inlines the `svg`'s from the `assets/images` folder directly into the HTML, so they can be styled with CSS. The required TailwindCSS classes for styling are directly added into the svg images themselves.
