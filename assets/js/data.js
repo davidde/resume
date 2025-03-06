@@ -69,7 +69,114 @@ const data =
     }
   },
   "main": {
-
+    "education": {
+      "5": {
+        "year": [
+          "2024 - now",
+          "2024 - heden"
+        ],
+        "programme": [
+          "Graduate Electromechanical Systems",
+          "Graduaat Elektromechanische systemen"
+        ],
+        "institution": [
+          "Odisee Ghent, enrolled in 1st year",
+          "Odisee Gent, in opleiding 1e jaar"
+        ],
+      },
+      "4": {
+        "year": [ "2022 - 2023" ],
+        "programme": [
+          ".NET development with C#",
+          ".NET developer met C#"
+        ],
+        "institution": [
+          "VDAB, certificate obtained",
+          "VDAB, certificaat behaald"
+        ],
+      },
+      "3": {
+        "year": [ "2011 - 2013" ],
+        "programme": [
+          "Biology",
+          "Biologie"
+        ],
+        "institution": [
+          "Brussels University (VUB), courses followed",
+          "VUB, vakken gevolgd"
+        ],
+      },
+      "2": {
+        "year": [ "2004 - 2005" ],
+        "programme": [
+          "Bioscience Engineering",
+          "Bio-ingenieur"
+        ],
+        "institution": [
+          "Ghent University, courses followed",
+          "Ugent, vakken gevolgd"
+        ],
+      },
+      "1": {
+        "year": [ "1998 - 2004" ],
+        "programme": [
+          "ASO Science - Maths",
+          "ASO Wetenschappen - Wiskunde"
+        ],
+        "institution": [
+          "Sint-Barbaracollege, graduated",
+          "Sint-Barbaracollege, diploma behaald"
+        ],
+      },
+    },
+    "experience": {
+      "3": {
+        "year": [ "2020 - 2021" ],
+        "occupation": [
+          "Volunteer work Tanzania",
+          "Vrijwilligerswerk Tanzania"
+        ],
+        "employer": [ "Golden Dream Safaris" ],
+        "extra": {
+          "1": [
+            "Develop website",
+            "Ontwikkelen van website"
+          ],
+          "2": [
+            "Develop quotation tool",
+            "Ontwikkelen van quotation tool"
+          ],
+        },
+      },
+      "2": {
+        "year": [ "2018 - 2019" ],
+        "occupation": [ "Open-source development" ],
+        "employer": [
+          "Github, several React.js projects",
+          "Github, verschillende React.js-projecten"
+        ],
+        "extra": {},
+      },
+      "1": {
+        "year": [ "2016 - 2017" ],
+        "occupation": [ "Python developer" ],
+        "employer": [ "TLCC" ],
+        "extra": {
+          "1": [
+            "Development and maintenance of Ediflex, an ETL platform for the transport- and logistics sector",
+            "Ontwikkeling en onderhoud van Ediflex, een ETL platform voor de transport- en logistiek sector"
+          ],
+          "2": [
+            "Troubleshooting of runtime errors in Ediflex",
+            "Troubleshooting van runtime errors in Ediflex"
+          ],
+          "3": [
+            "Follow-up and support for customers",
+            "Opvolging en support voor klanten"
+          ],
+        },
+      },
+    }
   }
 };
 
