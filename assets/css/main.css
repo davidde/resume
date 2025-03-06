@@ -118,7 +118,7 @@ main {
   line-height: 1em;
   .list-line {
     position: absolute;
-    border-left: calc(1/16 * 1em) solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
     top: 0.5em;
     bottom: 0.2em;
     left: calc(0.5em - 1/32 * 1em);
