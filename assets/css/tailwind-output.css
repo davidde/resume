@@ -205,6 +205,12 @@
   .m-\[0_0\.5rem_0_calc\(var\(--sidebar-width\)\+var\(--sidebar-margin-left\)-1px\)\] {
     margin: 0 0.5rem 0 calc(var(--sidebar-width) + var(--sidebar-margin-left) - 1px);
   }
+  .mx-\[1\.5rem_0\.5rem\] {
+    margin-inline: 1.5rem 0.5rem;
+  }
+  .mx-\[1rem_0\.5rem\] {
+    margin-inline: 1rem 0.5rem;
+  }
   .mx-\[auto\] {
     margin-inline: auto;
   }

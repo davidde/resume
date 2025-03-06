@@ -10,21 +10,22 @@ function loadTemplate(template) {
     .then(response => response.text())
     .then(html => {
       const target = document.getElementsByTagName(targetElement)[0];
-      const clone = target.cloneNode(true);
-      clone.innerHTML = html;
-      clone.querySelectorAll('[data-resume]').forEach(
+      target.insertAdjacentHTML('beforeend', html);
+      target.querySelectorAll('[data-resume]').forEach(
         element => {
           const keys = element.getAttribute('data-resume');
           let value = data[template];
-          // Recursively find the "leaf value" ARRAY:
+          // Recursively find the "leaf value" key to the ['en', 'nl'] ARRAY:
           keys.split(".").forEach(key => value = value[key]);
           // Default to English value if Dutch one doesn't exist:
           value = value[lang] ? value[lang] : value[0];
           // Only update the HTML if the data actually contains a value:
-          if (value) element.innerHTML = value;
+          if (value) {
+            element.replaceChildren();
+            element.insertAdjacentHTML('beforeend', value);
+          }
         }
       );
-      target.innerHTML = clone.innerHTML;
       if (template === 'sidebar') inlineSvgIcons();
     })
     .catch(error => console.error('Error loading template:', error));
@@ -42,7 +43,7 @@ function inlineSvgIcons() {
           }
           return response.text()
         })
-        .then(html => icon.innerHTML = html)
+        .then(html => icon.insertAdjacentHTML('beforeend', html))
         .catch(err => console.error(`Error loading SVG: ${url}`, err));
     });
 }
