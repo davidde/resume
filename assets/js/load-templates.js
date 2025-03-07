@@ -3,14 +3,13 @@ import data from './data.js';
 
 function loadTemplate(template) {
   const templatePath = `../assets/html/${template}-template.html`;
-  const targetElement = template === 'sidebar' ? 'aside' : template;
   const lang = document.documentElement.lang == 'en' ? 0 : 1;
 
   fetch(templatePath)
     .then(response => response.text())
     .then(html => {
-      const target = document.getElementsByTagName(targetElement)[0];
-      target.insertAdjacentHTML('beforeend', html);
+      const target = document.getElementsByTagName(template)[0];
+      target.insertAdjacentHTML('afterbegin', html);
       target.querySelectorAll('[data-resume]').forEach(
         element => {
           const keys = element.getAttribute('data-resume');
@@ -25,30 +24,22 @@ function loadTemplate(template) {
           }
         }
       );
-      if (template === 'sidebar') inlineSvgIcons();
+      if (template === 'aside') inlineSvgIcons();
     })
     .catch(error => console.error('Error loading template:', error));
 }
 
 function inlineSvgIcons() {
   document.querySelectorAll("[data-svg]")
-    .forEach(icon => {
-      const url = icon.getAttribute("data-svg");
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            console.error(`SVG URL '${url}' Not Found`);
-            return null;
-          }
-          return response.text()
-        })
-        .then(html => icon.insertAdjacentHTML('beforeend', html))
-        .catch(err => console.error(`Error loading SVG: ${url}`, err));
-    });
+    .forEach(icon => fetch(icon.getAttribute("data-svg"))
+      .then(response => response.text())
+      .then(html => icon.insertAdjacentHTML('afterbegin', html))
+      .catch(err => console.error('Error loading SVG:', err))
+    );
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   loadTemplate('header');
-  loadTemplate('sidebar');
+  loadTemplate('aside');
   loadTemplate('main');
 });

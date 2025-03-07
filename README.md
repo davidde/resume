@@ -4,14 +4,14 @@
 > At least now I know why people generally don't write their resumes in HTML + CSS... 😬
 
 ## Project Goals
-* Recreate my [canva](https://www.canva.com) resume as a webpage.
+* Create my resume as a webpage.
 * Optimize the code for a clean single page "Print to PDF" browser export.
-* Import everything efficiently from a data store that can be easily modified.
+* Import all data efficiently from a file that can be easily modified.
 
 &nbsp;
 > [!IMPORTANT]
 > * Because CSS by itself gets unwieldy fast, we are choosing to install **TailwindCSS v4** using the [**standalone CLI**](https://tailwindcss.com/blog/standalone-cli), meaning no javascript or node.js is involved. We're currently working on **Windows 11**.
-> * Because the HTML gets large really fast (especially with inlined svg's), we're splitting them into several "template" files and using Javascript to inject them into the page. This approach also allows filling them with data from the `data.js` file.
+> * Because the HTML gets large really fast (especially with inlined svg's), we're splitting them into several "template" files and using Javascript to inject them into the page. This approach also allows importing the data from the `data.js` file.
 &nbsp;
 
 ## Installing TailwindCSS
@@ -44,11 +44,11 @@
 
 ## Template injection
 The templates are loaded by the `load-templates.js` file, using the following templates:
+* `aside-template.html`
 * `header-template.html`
 * `main-template.html`
-* `sidebar-template.html`
 
-They are loaded directly in the `<header>`, `<aside>` and `<main>` tags in the `dutch/index.html` and `english/index.html` files by an `EventListener` on `DOMContentLoaded`.
+They are injected directly in the `<aside>`, `<header>` and `<main>` tags in the `dutch/index.html` or `english/index.html` files by an EventListener on `DOMContentLoaded`.
 
 Note that this will not work when just opening the files in the browser; a server needs to be running. You can use the excellent VScode [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension for this. (The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension seemed to throw incorrect errors).
 
@@ -58,4 +58,4 @@ The `load-templates.js` file also imports the relevant data from the `data.js` f
 All **values** in the `data.js` file are arrays; index 0 contains the English value, while index 1 contains the Dutch value. If no Dutch value is present, the page will default to the English value. If the value array in `data.js` is empty, nothing will be added to the resume.
 
 ## SVG inlining
-The `load-templates.js` script also inlines the `svg`'s from the `assets/images` folder directly into the HTML, so they can be styled with CSS. The required TailwindCSS classes for styling are directly added into the svg images themselves.
+The `load-templates.js` script also inlines the `svg`'s from the `assets/images` folder directly into the HTML, using the `data-svg` attributes from the template files. This way, the template files aren't polluted with hundreds of lines of svg code, while the svg's can still be styled with TailwindCSS. The TailwindCSS classes are directly embedded into the svg code itself.

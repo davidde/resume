@@ -13,7 +13,7 @@ const data =
       "Ik ben een creatief developer met een passie voor design. Ik hou ervan om efficiënte code achter een intuïtieve user interface te steken. Ik streef altijd naar de optimale oplossing in functie van onderhoudbaarheid vs performantie. Aangezien ik een heel brede interesse heb in maatschappij, wetenschap en technologie, ben ik gedreven me steeds verder te blijven ontwikkelen. Daarom werk ik ook graag in een team."
     ]
   },
-  "sidebar": {
+  "aside": {
     "contact": {
       "phone": [
         // (Fake phone number:)
