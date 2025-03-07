@@ -2,7 +2,9 @@
 // - Index 0: English value
 // - Index 1: Dutch value
 // If no Dutch value is provided, it will default to the English value.
-// The value array can also be left entirely empty, and nothing will be added.
+// The value array should at the very least consist of the empty string;
+// then nothing will be added. (Otherwise 'undefined' will be added
+// into the respective HTML field.)
 const data =
 {
   "header": {
@@ -66,7 +68,7 @@ const data =
       },
       "5": {
         "general": [ "Agile methodologies & Scrum" ],
-        "specific": [ ]
+        "specific": [ "" ]
       },
       "6": {
         "general": [ "Design" ],

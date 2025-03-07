@@ -18,10 +18,7 @@ function loadTemplate(template) {
           keys.split(".").forEach(key => value = value[key]);
           // Default to English value if Dutch one doesn't exist:
           value = value[lang] ? value[lang] : value[0];
-          // Only update the HTML if the data actually contains a value:
-          if (value) {
-            element.insertAdjacentHTML('afterbegin', value);
-          }
+          element.insertAdjacentHTML('afterbegin', value);
         }
       );
       if (template === 'aside') inlineSvgIcons();
