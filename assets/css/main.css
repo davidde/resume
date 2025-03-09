@@ -37,15 +37,15 @@
 :root {
   --accent-color: #d9d9d9;
   --header-bg: #b2afaf;
-  --sidebar-bg: black;
+  --aside-bg: black;
   --main-bg: white;
 
-  --sidebar-margin-top: 1rem;
-  --sidebar-margin-left: 1.5rem;
-  --sidebar-width: 36vw;
+  --aside-margin-top: 1rem;
+  --aside-margin-left: 1.5rem;
+  --aside-width: 36vw;
   --header-margin-top: 4.5rem;
   --header-padding-left: 4.5rem;
-  --sidebar-heading-height: 2.6em;
+  --aside-heading-height: 2.6em;
   --main-heading-height: 2.7em;
 
   --bullet-diameter: 0.65em;
@@ -67,13 +67,13 @@ body {
 }
 
 header {
-  --text-color: var(--sidebar-bg);
+  --text-color: var(--aside-bg);
   --bg-color: var(--header-bg);
 }
 
 aside {
   --text-color: var(--accent-color);
-  --bg-color: var(--sidebar-bg);
+  --bg-color: var(--aside-bg);
 
   .list {
     .list-item {
@@ -105,7 +105,7 @@ aside {
 }
 
 main {
-  --text-color: var(--sidebar-bg);
+  --text-color: var(--aside-bg);
   --bg-color: var(--main-bg);
 }
 

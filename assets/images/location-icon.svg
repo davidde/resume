@@ -1,4 +1,4 @@
-<svg class='fill-[var(--header-bg)] h-[1.7em] w-[1.9em] min-w-[1.9em]' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' overflow='hidden' viewBox='0 0 24 24' preserveAspectRatio='none'>
+<svg class='fill-(--accent-color) h-[1.7em] w-[1.9em] min-w-[1.9em]' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' overflow='hidden' viewBox='0 0 24 24' preserveAspectRatio='none'>
   <defs>
     <clipPath id='clip0'>
       <path d='M1.06621 66.4403 24.0597 66.4403 24.0598 89.4302 1.06628 89.4303Z' fill-rule='evenodd' clip-rule='evenodd'/>

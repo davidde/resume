@@ -1,31 +1,31 @@
 <!-- Sidebar with avatar: -->
-<div class='absolute mt-(--sidebar-margin-top) left-(--sidebar-margin-left) h-[calc(100%-var(--sidebar-margin-top))] w-(--sidebar-width) text-(--text-color) text-[1.3rem]'>
+<div class='absolute mt-(--aside-margin-top) left-(--aside-margin-left) h-[calc(100%-var(--aside-margin-top))] w-(--aside-width) text-(--text-color) text-[1.3rem]'>
   <!-- Black circle surrounding avatar: -->
-  <div class='absolute top-0 z-10 h-(--sidebar-width) w-(--sidebar-width) rounded-[50%] bg-(--bg-color) shadow-[0.8rem_-0.5rem_0.6rem_0rem_#aaaaaa]'>
+  <div class='absolute top-0 z-10 h-(--aside-width) w-(--aside-width) rounded-[50%] bg-(--bg-color) shadow-[0.8rem_-0.5rem_0.6rem_0rem_#aaaaaa]'>
     <!-- Avatar: -->
     <div class='filter-[drop-shadow(0_0_1rem_white)]'>
-      <image src='../assets/images/avatar-david.png' class='w-[calc(0.75*var(--sidebar-width))] clipcirc-radius-[40%] clipcirc-x-[52%] clipcirc-y-[50%] my-[1rem] mx-[auto]'></image>
+      <image src='../assets/images/avatar-david.png' class='w-[calc(0.75*var(--aside-width))] clipcirc-radius-[40%] clipcirc-x-[52%] clipcirc-y-[50%] my-[1rem] mx-[auto]'></image>
     </div>
     <!-- Mask the black circle's shadow inside the sidebar': -->
-    <div class='absolute top-[calc(var(--sidebar-width)/2)] h-(--sidebar-width) w-(--sidebar-width) bg-(--bg-color) -z-10'></div>
+    <div class='absolute top-[calc(var(--aside-width)/2)] h-(--aside-width) w-(--aside-width) bg-(--bg-color) -z-10'></div>
   </div>
 
   <!-- Black sidebar below avatar with content: -->
-  <div class='absolute top-[calc(var(--sidebar-width)/2)] min-h-[calc(100%-var(--sidebar-width)/2)] w-(--sidebar-width) pt-[calc(var(--sidebar-width)/3+1.5rem)] bg-(--bg-color) overflow-hidden shadow-[0.8rem_-0.5rem_0.7rem_0rem_#aaaaaa]'>
+  <div class='absolute top-[calc(var(--aside-width)/2)] min-h-[calc(100%-var(--aside-width)/2)] w-(--aside-width) pt-[calc(var(--aside-width)/3+1.5rem)] bg-(--bg-color) overflow-hidden shadow-[0.8rem_-0.5rem_0.7rem_0rem_#aaaaaa]'>
     <!-- CONTACT SECTION: -->
     <div>
       <div>
         <!-- CONTACT HEADING: -->
-        <div class='relative bg-linear-to-r from-(--header-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--sidebar-width)*0.7)] h-(--sidebar-heading-height) z-100 flex justify-center'>
+        <div class='relative bg-linear-to-r from-(--header-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--aside-width)*0.7)] h-(--aside-heading-height) z-100 flex justify-center'>
           <h2 class='text-(--bg-color) text-[2.2rem] font-extrabold whitespace-nowrap'>
             CONTACT
           </h2>
           <!-- Rounded edge for HEADING: -->
-          <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--sidebar-heading-height)/2)] h-(--sidebar-heading-height) w-(--sidebar-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
+          <div class='absolute top-0 left-[calc(var(--aside-width)*0.7-var(--aside-heading-height)/2)] h-(--aside-heading-height) w-(--aside-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
         </div>
       </div>
       <!-- CONTACT CONTENT: -->
-      <div class='font-medium ml-[1.2em] pt-[1em] pb-[2em] pr-[0.5rem] flex flex-col gap-[0.6em] w-[calc(var(--sidebar-width)-1.2em)]'>
+      <div class='font-medium ml-[1.2em] pt-[1em] pb-[2em] pr-[0.5rem] flex flex-col gap-[0.6em] w-[calc(var(--aside-width)-1.2em)]'>
         <p class='flex flex-row z-100'>
           <!-- Phone Icon: -->
           <span data-svg='../assets/images/phone-icon.svg'></span>
@@ -62,17 +62,17 @@
     <div>
       <div>
         <!-- ABOUT ME HEADING: -->
-        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--sidebar-width)*0.7)] h-(--sidebar-heading-height) z-100 flex justify-center'>
+        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--aside-width)*0.7)] h-(--aside-heading-height) z-100 flex justify-center'>
           <h2 class='text-(--bg-color) text-[2.2rem] font-extrabold wordsp-[0.35em] whitespace-nowrap'>
             ABOUT ME
           </h2>
           <!-- Rounded edge for HEADING: -->
-          <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--sidebar-heading-height)/2)] h-(--sidebar-heading-height) w-(--sidebar-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
+          <div class='absolute top-0 left-[calc(var(--aside-width)*0.7-var(--aside-heading-height)/2)] h-(--aside-heading-height) w-(--aside-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
         </div>
       </div>
       <!-- ABOUT ME CONTENT: -->
       <!-- <div> that functions as <ul> list: -->
-      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--sidebar-width) gap-[0.8rem] z-100' id='about-me'>
+      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--aside-width) gap-[0.8rem] z-100' id='about-me'>
         <!-- List Item <div>: -->
         <div class='list-item'>
           <div class='list-bullet-container'>
@@ -139,17 +139,17 @@
     <div>
       <div>
         <!-- SOFT SKILLS HEADING: -->
-        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--sidebar-width)*0.7)] h-(--sidebar-heading-height) z-100 flex justify-center'>
+        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--aside-width)*0.7)] h-(--aside-heading-height) z-100 flex justify-center'>
           <h2 class='text-(--bg-color) text-[2.2rem] font-extrabold wordsp-[0.35em] whitespace-nowrap'>
             SOFT SKILLS
           </h2>
           <!-- Rounded edge for HEADING: -->
-          <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--sidebar-heading-height)/2)] h-(--sidebar-heading-height) w-(--sidebar-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
+          <div class='absolute top-0 left-[calc(var(--aside-width)*0.7-var(--aside-heading-height)/2)] h-(--aside-heading-height) w-(--aside-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
         </div>
       </div>
       <!-- SOFT SKILLS CONTENT: -->
       <!-- <div> that functions as <ul> list: -->
-      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--sidebar-width) gap-[0.8rem]' id='soft-skills'>
+      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--aside-width) gap-[0.8rem]' id='soft-skills'>
         <!-- List Item <div>: -->
         <div class='list-item'>
           <div class='list-bullet-container'>
@@ -181,17 +181,17 @@
     <div>
       <div>
         <!-- TECH SKILLS HEADING: -->
-        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--sidebar-width)*0.7)] h-(--sidebar-heading-height) z-100 flex justify-center'>
+        <div class='relative bg-linear-to-r from-(--main-bg) from-10% to-(--accent-color) to-80% mt-0 w-[calc(var(--aside-width)*0.7)] h-(--aside-heading-height) z-100 flex justify-center'>
           <h2 class='text-(--bg-color) text-[2.2rem] font-extrabold wordsp-[0.35em] whitespace-nowrap'>
             TECH SKILLS
           </h2>
           <!-- Rounded edge for HEADING: -->
-          <div class='absolute top-0 left-[calc(var(--sidebar-width)*0.7-var(--sidebar-heading-height)/2)] h-(--sidebar-heading-height) w-(--sidebar-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
+          <div class='absolute top-0 left-[calc(var(--aside-width)*0.7-var(--aside-heading-height)/2)] h-(--aside-heading-height) w-(--aside-heading-height) rounded-[50%] bg-(--accent-color) -z-10' ></div>
         </div>
       </div>
       <!-- TECH SKILLS CONTENT: -->
       <!-- <div> that functions as <ul> list: -->
-      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--sidebar-width) gap-[0.8rem]' id='tech-skills'>
+      <div class='list my-[1.8rem_2.4rem] px-[1.75rem_0.5rem] w-(--aside-width) gap-[0.8rem]' id='tech-skills'>
         <!-- List Item <div>: -->
         <div class='list-item'>
           <div class='list-bullet-container'>

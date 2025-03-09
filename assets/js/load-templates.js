@@ -36,7 +36,7 @@ function inlineSvgIcons() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadTemplate('header');
   loadTemplate('aside');
+  loadTemplate('header');
   loadTemplate('main');
 });
